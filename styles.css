@@ -32,9 +32,10 @@ body {
     font-weight: 900;
   }
   
+  /* Who am I */
   .who {
     background-color: #e8f0fe;
-    padding: 60px 20px;  
+    padding: 60px 20px;
   }
   
   .who-content {
@@ -46,7 +47,7 @@ body {
     margin: auto;
     padding: 40px 20px;
   }
-
+  
   .profile-img {
     width: 100%;
     max-width: 300px;
@@ -55,6 +56,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
+  /* Strengths */
   .strengths {
     background: #fff;
     padding: 60px 20px;
@@ -77,6 +79,7 @@ body {
   .lightblue { background: #6dcff6; }
   .darkblue { background: #337aff; }
   
+  /* Skills */
   .skills .skill-icons {
     display: flex;
     gap: 20px;
