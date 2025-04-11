@@ -35,7 +35,8 @@ body {
   /* Who am I */
   .who {
     background-color: #e8f0fe;
-    padding: 60px 20px;
+    position: relative;
+    padding: 100px 0; /* 배경 높이 확보 */
   }
   
   .who-content .text {
@@ -45,28 +46,37 @@ body {
     line-height: 1.6;
   }
 
-/* 배치: 여백 최소화, 배경에 밀착 */
-.who-content.no-frame {
+  .who-content.fixed-bottom {
     display: flex;
-    align-items: flex-end;  /* ✅ 하단 정렬로 변경 */
-    justify-content: center;
-    gap: 60px;
-    padding: 60px 20px;
-    background-color: #e8f0fe;
+    align-items: flex-end;       /* 하단 맞춤 핵심! */
+    justify-content: flex-start; /* 왼쪽 정렬로 자연스럽게 */
     max-width: 1100px;
     margin: auto;
-    flex-wrap: wrap;
+    position: relative;
+    min-height: 400px;
+    padding: 0 20px;
+    gap: 60px;
   }
   
-  .profile-img.no-border {
-    width: 220px;        /* ✅ 고정 크기 */
+  .img-box {
+    flex-shrink: 0;
+  }
+  
+  .profile-img {
+    width: 220px;
     height: auto;
     object-fit: cover;
     border-radius: 0;
     box-shadow: none;
-    margin: 0;
-    flex-shrink: 0;       /* ✅ 크기 줄어들지 않게 고정 */
   }
+  
+  .text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-bottom: 20px; /* 아래 라인 맞추기 위해 여유 */
+  }
+  
 
   /* Strengths */
   .strengths {
