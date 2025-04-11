@@ -38,25 +38,34 @@ body {
     padding: 60px 20px;
   }
   
+  .who-content .text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
 /* 배치: 여백 최소화, 배경에 밀착 */
 .who-content.no-frame {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 40px;                 /* 조금만 간격 조정 */
+    gap: 60px;
     padding: 60px 20px;
     background-color: #e8f0fe;
     max-width: 1100px;
     margin: auto;
+    flex-wrap: wrap;
   }
   
   .profile-img.no-border {
-    width: 200px;            /* ✅ 고정 너비 */
+    width: 220px;        /* ✅ 고정 크기 */
     height: auto;
-    object-fit: contain;     /* 비율 유지하면서 맞춰 보여줌 */
+    object-fit: cover;
     border-radius: 0;
     box-shadow: none;
     margin: 0;
+    flex-shrink: 0;       /* ✅ 크기 줄어들지 않게 고정 */
   }
 
   /* Strengths */
