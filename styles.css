@@ -2,10 +2,19 @@ body {
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
   }
+
+html {
+    scroll-behavior: smooth;
+  }
   
   .main-header {
     background-color: #4f81f7;
-    padding: 20px;
+    padding: 12px 20px;        /* ✅ 기존보다 살짝 줄임 */
+    position: fixed;          /* ✅ 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;             /* ✅ 다른 요소보다 위에 있도록 */
   }
   
   .main-header ul {
@@ -30,6 +39,8 @@ body {
     background: white;
     text-align: center;
     padding: 0 20px;
+    margin-top: 60px;  /* ✅ 고정된 헤더 높이만큼 밀어줌 */
+
   }
   
   .intro h1 {
@@ -151,7 +162,7 @@ body {
     position: relative;
     transition: transform 1s ease;
     opacity: 0;
-    transform: translateY(150px);
+    transform: translateY(80px);
   }
 
   .card.show {
