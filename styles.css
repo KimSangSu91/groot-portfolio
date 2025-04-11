@@ -22,9 +22,14 @@ body {
   }
   
   .intro {
-    text-align: center;
-    padding: 100px 20px;
+    height: 85vh;             /* ✅ 브라우저 높이에 딱 맞게! */
+    display: flex;             /* ✅ 가운데 정렬을 위해 flex 사용 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: white;
+    text-align: center;
+    padding: 0 20px;
   }
   
   .intro h1 {
