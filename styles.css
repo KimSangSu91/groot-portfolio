@@ -43,17 +43,16 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 60px;
-    padding: 60px 40px;
+    gap: 40px;                 /* 조금만 간격 조정 */
+    padding: 60px 20px;
     background-color: #e8f0fe;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
-    box-shadow: none;
-    border: none;
   }
   
   .profile-img.no-border {
-    width: 260px;
+    width: 100%;
+    max-width: 240px;  /* ✅ 이미지 크기 제한 */
     height: auto;
     object-fit: cover;
     border-radius: 0;
