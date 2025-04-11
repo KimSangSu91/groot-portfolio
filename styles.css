@@ -48,7 +48,7 @@ body {
 /* 배치: 여백 최소화, 배경에 밀착 */
 .who-content.no-frame {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;  /* ✅ 하단 정렬로 변경 */
     justify-content: center;
     gap: 60px;
     padding: 60px 20px;
