@@ -60,7 +60,7 @@ body {
   }  
   
   .profile-img {
-    width: 330px;
+    width: 300px;
     height: auto;
     object-fit: cover;
     border-radius: 0;
@@ -69,8 +69,13 @@ body {
   }
   
   .text {
-    padding-left: 350px;  /* 이미지 너비 + 여유 */
+    padding-left: 380px;  /* 이미지 너비 + 여유 */
     padding-top: 40px;
+  }
+
+  .text h3 {
+    color: #4f81f7;      /* 파란색 */
+    font-weight: bold;   /* 볼드 */
   }
 
   /* Strengths */
