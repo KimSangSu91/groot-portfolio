@@ -38,25 +38,29 @@ body {
     padding: 60px 20px;
   }
   
-  .who-content {
+/* 배치: 여백 최소화, 배경에 밀착 */
+.who-content.no-frame {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 60px;
-    flex-wrap: wrap;
-    max-width: 1000px;
+    padding: 60px 40px;
+    background-color: #e8f0fe;
+    max-width: 1200px;
     margin: auto;
-    padding: 60px 20px;
+    box-shadow: none;
+    border: none;
   }
   
-  .profile-img {
-    width: 240px;
+  .profile-img.no-border {
+    width: 260px;
     height: auto;
     object-fit: cover;
-    border-radius: 12px; /* 살짝 둥글게 */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }  
-  
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+
   /* Strengths */
   .strengths {
     background: #fff;
