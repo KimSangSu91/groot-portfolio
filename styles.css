@@ -84,7 +84,7 @@ html {
   .who-content.fixed-bottom {
     position: relative;
     height: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: flex-start;
@@ -218,4 +218,103 @@ html {
     font-size: 14px;
     padding: 10px;
   }
+
+    /* contact */
+    .contact-section {
+        padding: 100px 40px;
+        background-color: #fff;
+        text-align: center;
+      }
+      
+      .contact-header .section-sub {
+        font-size: 16px;
+        font-weight: bold;
+        color: #0d6efd;
+        margin-bottom: 10px;
+      }
+      
+      .contact-header .section-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+        text-align: left;
+        max-width: 1000px;
+        margin: auto;
+      }
+      
+      .contact-info {
+        flex: 1;
+        min-width: 280px;
+      }
+      
+      .contact-info h3 {
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      
+      .info-item span {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+      
+      .info-item p {
+        margin: 2px 0 0 0;
+      }
+      
+      .contact-form {
+        flex: 1;
+        min-width: 280px;
+      }
+      
+      .contact-form h4 {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .contact-form input,
+      .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+        width: 100%;
+      }
+      
+      .contact-form button {
+        background: #0d6efd;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 200px;          /* ← 이게 버튼을 전체 너비로 늘리는 설정 */
+        font-size: 16px;      /* ← 텍스트 크기 */
+      }
+      
+      .contact-form button:hover {
+        background: #0d6efd;
+    }
+      
   

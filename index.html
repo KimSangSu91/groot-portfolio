@@ -8,6 +8,38 @@
 </head>
 <script src="script.js"></script>
 <body>
+  <body>
+    <!-- ... Contact form 및 페이지 내용 ... -->
+  
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+  
+        const form = e.target;
+        const data = new FormData(form);
+  
+        fetch("https://script.google.com/macros/s/🟦배포URL🟦/exec", {
+          method: "POST",
+          body: data
+        })
+        .then(res => res.text())
+        .then(result => {
+          if (result === "success") {
+            alert("메시지가 전송되었습니다!");
+            form.reset();
+          } else {
+            alert("전송에 실패했습니다.");
+          }
+        })
+        .catch(err => {
+          alert("오류가 발생했습니다.");
+          console.error(err);
+        });
+      });
+    </script>
+  </body>
+  </html>
+  
 
   <!-- 1. 헤더 -->
   <header class="main-header">
@@ -19,6 +51,7 @@
         <li><a href="#skills">Skill & Tool</a></li>
         <li><a href="#work">Work Experience</a></li>
         <li><a href="#projects">Project</a></li>
+        <li><a href="#contact">Contact</a></li> 
       </ul>
     </nav>
   </header>
@@ -156,6 +189,55 @@
       <div class="swiper-box">[이미지 슬라이드 영역]</div>
     </div>
   </section>
+
+<!-- 8. Contact -->
+<section id="contact" class="contact-section">
+  <div class="contact-header">
+    <h3 class="section-sub">Contact me</h3>
+    <h2 class="section-title">get in touch</h2>
+  </div>
+
+  <div class="contact-container">
+    <!-- 왼쪽 정보 영역 -->
+    <div class="contact-info">
+      <h3>함께 고민해요</h3>
+      <p>언제든 연락해주세요</p>
+
+      <div class="info-item">
+        <span>👤</span>
+        <div>
+          <strong>Name</strong>
+          <p>Kim Sang-Su</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span>📍</span>
+        <div>
+          <strong>Address</strong>
+          <p>Centum, Busan, Republic of Korea</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span>📧</span>
+        <div>
+          <strong>Email</strong>
+          <p>dkfosk@naver.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 오른쪽 폼 영역 -->
+    <div class="contact-form">
+      <h4>Message me</h4>
+      <form id="contact-form">
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Message.." required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
 </body>
 </html>
