@@ -110,26 +110,83 @@ body {
   /* Strengths */
   .strengths {
     background: #fff;
-    padding: 60px 20px;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .section-header {
+    margin-bottom: 60px;
+  }
+  
+  
+  .section-sub {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4f81f7;
+    margin-bottom: 10px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0;
   }
   
   .strength-cards {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   .card {
-    width: 280px;
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
+    background: #f8f9ff;
+    border-radius: 18px;
+    padding: 25px 30px;
+    width: 360px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    color: #111;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease;
   }
   
-  .blue { background: #1f66f8; }
-  .lightblue { background: #6dcff6; }
-  .darkblue { background: #337aff; }
+  .card:hover {
+    transform: translateY(-4px);
+  }
   
+  .badge {
+    background: #0d6efd;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  
+  .card h4 {
+    color: #0d6efd;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .card p strong {
+    color: #333;
+  }
+  
+  .softblue { background-color: #e9f2ff; }
+  .skyblue   { background-color: #c3e8fd; }
+  .lightpurple { background-color: #cfdcfc; }
+
+
   /* Skills */
   .skills .skill-icons {
     display: flex;
