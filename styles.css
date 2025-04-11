@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .main-header {
+    background-color: #4f81f7;
+    padding: 20px;
+  }
+  
+  .main-header ul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .main-header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .intro {
+    text-align: center;
+    padding: 100px 20px;
+    background: white;
+  }
+  
+  .intro h1 {
+    font-size: 48px;
+    font-weight: 900;
+  }
+  
+  .who {
+    background-color: #e8f0fe;
+    padding: 60px 20px;
+  }
+  
+  .who-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .strengths {
+    background: #fff;
+    padding: 60px 20px;
+  }
+  
+  .strength-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+  }
+  
+  .blue { background: #1f66f8; }
+  .lightblue { background: #6dcff6; }
+  .darkblue { background: #337aff; }
+  
+  .skills .skill-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .skill-icons .icon {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+  
