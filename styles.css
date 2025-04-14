@@ -292,13 +292,32 @@ html {
         gap: 15px;
       }
       
-      .contact-form input,
+      .contact-form input[type="email"] {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+        width: 100%;
+        height: auto;          /* 높이 자동 조절 (기본 1줄) */
+        resize: none;          /* 크기 조절 못 하게 */
+      }
+      
+      /* 메시지 textarea - 4줄 + 내부 스크롤 */
       .contact-form textarea {
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 6px;
         font-size: 14px;
         width: 100%;
+        height: 6em;           /* 1줄 ≈ 1.5em → 약 4줄 */
+        resize: none;
+        overflow-y: auto;
+      }
+
+      .contact-form textarea::placeholder {
+        font-family: 'Noto Sans KR', sans-serif;  /* 너가 쓰고 있는 기본 글꼴로 */
+        font-size: 14px;
+        color: #888; /* 원하는 회색 톤 */
       }
       
       .contact-form button {
