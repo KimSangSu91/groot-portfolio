@@ -118,6 +118,32 @@ html {
     font-weight: bold;   /* 볼드 */
   }
 
+  @media (max-width: 768px) {
+    .who-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .img-box {
+      position: static;         /* ✅ 모바일에선 absolute 해제 */
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .text {
+      padding-left: 0;
+      padding-top: 0;           /* ✅ 위쪽 여백도 제거해도 자연스러움 */
+    }
+  
+    .profile-img {
+      width: 150px;
+      height: auto;
+    }
+  }
+
   /* Strengths */
   .strengths {
     background: #fff;
@@ -204,7 +230,62 @@ html {
   .skyblue   { background-color: #c3e8fd; }
   .lightpurple { background-color: #cfdcfc; }
 
+    /* work-experience */
+    .work-experience {
+      background-color: #eaf1fb;
+      padding: 100px 20px;
+    }
+    
+    .work-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-sub {
+      font-size: 18px;
+      font-weight: 700;
+      color: #4f81f7;
+      margin-bottom: 10px;
+    }
 
+  .experience-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .experience-block {
+    margin-bottom: 50px;
+  }
+  
+  .experience-block h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .experience-block ul {
+    padding-left: 20px;
+  }
+  
+  .experience-block li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .period {
+    font-weight: 500;
+    color: #333;
+    margin-left: 8px;
+  }
+  
   /* Skills */
   .skills .skill-icons {
     display: flex;
