@@ -171,14 +171,14 @@ html {
     font-size: 18px;
     font-weight: 700;
     color: #4f81f7;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
   
   .section-title {
     font-size: 22px;
     font-weight: 700;
     color: #111;
-    margin-bottom: 0;
+    margin-bottom: 50px;
   }
   
   .strength-cards {
@@ -296,6 +296,17 @@ html {
     color: #333;
     margin-left: 8px;
   }
+
+  .company-link {
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.company-link:hover {
+  color: #4f81f7;
+  text-decoration: underline;
+}
   
   /* Skills */
   .skills .skill-icons {
