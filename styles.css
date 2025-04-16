@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Pretendard Variable', sans-serif;
   }
 
 html {
@@ -76,8 +76,8 @@ html {
   .who {
     position: relative;        /* 기준 박스 */
     background-color: #e8f0fe;
-    padding: 80px 0;           /* 여백 유지 */
-    min-height: 520px;         /* ✅ 이미지가 다 보이도록 넉넉히 */
+    padding: 0px 0;           /* 여백 유지 */
+    min-height: 600px;         /* ✅ 이미지가 다 보이도록 넉넉히 */
     overflow: hidden;          /* 혹시 이미지가 넘치면 깔끔히 자르기 */
   }
 
@@ -100,7 +100,7 @@ html {
   }  
   
   .profile-img {
-    width: 300px;
+    width: 330px;
     height: auto;
     object-fit: cover;
     border-radius: 0;
@@ -109,10 +109,16 @@ html {
   }
   
   .text {
-    padding-left: 380px;  /* 이미지 너비 + 여유 */
+    padding-left: 450px;
     padding-top: 40px;
   }
-
+  
+  .text p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+  }
+  
   .text h3 {
     color: #4f81f7;      /* 파란색 */
     font-weight: bold;   /* 볼드 */
@@ -135,9 +141,14 @@ html {
   
     .text {
       padding-left: 0;
-      padding-top: 0;           /* ✅ 위쪽 여백도 제거해도 자연스러움 */
+      padding-top: 0;
     }
-  
+    
+    .text p {
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
     .profile-img {
       width: 150px;
       height: auto;
