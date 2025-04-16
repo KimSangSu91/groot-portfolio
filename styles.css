@@ -383,6 +383,7 @@ html {
       padding: 60px 200px;
     }
     
+    
     .project-block {
       display: flex;
       justify-content: space-between;
@@ -427,6 +428,7 @@ html {
 
 
     .project-image-area {
+      margin-top: 100px; /* ✅ 이미지 영역을 아래로 내림 */
       flex: 1;
       max-width: 1000px;
       padding-left: 40px;
