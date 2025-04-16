@@ -386,16 +386,34 @@ html {
     .project-block {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 80px;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 100px;
       padding: 40px;
-      border-radius: 8px;
-      gap: 150px;
-      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .project-subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    
+    .project-section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 32px 0 20px;
+      color: #111;
+    }
+    
+    .project-section-block {
+      margin-bottom: 16px;
     }
     
     .project-info {
-      flex: 1;
-      min-width: 300px;
+      flex: 0 0 40%;            /* ✅ 좌측 텍스트 영역: 유연하게 반응 */
+      min-width: 280px;
     }
     
     .project-description {
@@ -405,6 +423,13 @@ html {
       letter-spacing: -0.02em;     /* ✅ 자간 살짝 좁게 */
       margin-bottom: 24px;
       word-break: keep-all;        /* ✅ 단어 단위 줄바꿈 */
+    }
+
+
+    .project-image-area {
+      flex: 1;
+      max-width: 1000px;
+      padding-left: 40px;
     }
     
     .contributions div {
@@ -461,12 +486,6 @@ html {
       background-color: #007bff;
     }
     
-    .project-image-area {
-      flex: 1;
-      position: relative;
-      min-width: 320px;
-    }
-    
     .slider {
       position: relative;
       width: 100%;
@@ -477,7 +496,7 @@ html {
     .slider img {
       display: none;
       width: 100%;
-      max-height: 300px;
+      max-height: 500px;      /* ✅ 높이 제한 */
       object-fit: contain;
     }
     
