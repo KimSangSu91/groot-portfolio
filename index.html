@@ -1,47 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Pretendard CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김상수 포트폴리오</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 </head>
-<script src="script.js"></script>
+
 <body>
-  <body>
-    <!-- ... Contact form 및 페이지 내용 ... -->
-  
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-  
-        const form = e.target;
-        const data = new FormData(form);
-  
-        fetch("https://script.google.com/macros/s/🟦배포URL🟦/exec", {
-          method: "POST",
-          body: data
-        })
-        .then(res => res.text())
-        .then(result => {
-          if (result === "success") {
-            alert("메시지가 전송되었습니다!");
-            form.reset();
-          } else {
-            alert("전송에 실패했습니다.");
-          }
-        })
-        .catch(err => {
-          alert("오류가 발생했습니다.");
-          console.error(err);
-        });
-      });
-    </script>
-  </body>
-  </html>
-  
 
   <!-- 1. 헤더 -->
   <header class="main-header">
@@ -53,7 +21,7 @@
         <li><a href="#work">Work Experience</a></li>
         <li><a href="#skills">Skill & Tool</a></li>
         <li><a href="#projects">Project</a></li>
-        <li><a href="#contact">Contact</a></li> 
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -62,89 +30,87 @@
   <section id="intro" class="intro">
     <h1>PORTFOLIO</h1>
     <p>만나서 반갑습니다.<br />김상수입니다.</p>
-      
-    <!-- ✅ 스크롤 유도 화살표 -->
     <a href="#who" class="scroll-down">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="#4f81f7" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 4V20M12 20L5 13M12 20L19 13" stroke="#4f81f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 4V20M12 20L5 13M12 20L19 13" stroke="#4f81f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </a>
   </section>
 
-  <!-- 3. Who am I -->
-  <section id="who" class="who">
-    <div class="who-content fixed-bottom">
-      <div class="img-box">
-        <img src="images/profile.png" alt="프로필" class="profile-img" />
-      </div>
-      <div class="text">
-        <h3>Who am I</h3>
-        <h2>배려, 도전, 책임감을 중요하게 생각합니다.</h2>
-        <p>
-          "그러면 이렇게 해보자"<br />
-          회사 생활을 하며 팀원으로도, 팀장으로도 수많은 실패와 시행착오를 겪었고,<br />
-          그럴 때마다 제가 자주 했던 말입니다.<br /><br />
-        
-          먼저, 함께 일하는 동료에 대한 배려를 중요하게 생각합니다.<br />
-          “네가 생각해 봐”, “네가 알아서 해” 같은 태도보다는 먼저 아이디어와 생각을 공유하려고 노력합니다.<br />
-          물론, 단지 아이디어만 제시하는 데 그치지 않고 솔선수범하는 자세를 갖기 위해 항상 노력합니다.<br /><br />
-        
-          두 번째로는 도전을 중요하게 생각합니다.<br />
-          스타트업에서 일하며 빠른 실행과 빠른 실패의 중요성을 배울 수 있었습니다.<br />
-          짧은 식견이지만 저는 모든 도전은 직접 해보지 않고는 결과를 알 수 없다고 생각합니다.<br />
-          일단 해보고 더 좋은, 발전적인 방향을 찾아 나가는 애자일 문화를 좋아합니다.<br /><br />
-        
-          세 번째로는 책임감을 중요하게 생각합니다.<br />
-          “어떻게든 되겠지”, “책임자가 알아서 하겠지” 같은 태도보다는, 문제의 본질을 바라보고 해결하려 노력합니다.<br />
-          ’내 일’과 ‘네 일’이 아닌 ‘우리의 일’로써 함께 해결해 나가는 과정을 소중하게 생각합니다.
-        </p>
-              </div>
+<!-- 3. Who am I -->
+<section id="who" class="who">
+  <div class="who-content fixed-bottom">
+    <div class="img-box">
+      <img src="images/profile.png" alt="프로필" class="profile-img" />
     </div>
-  </section>
+    <div class="text">
+      <h3>Who am I</h3>
+      <h2>배려, 도전, 책임감을 중요하게 생각합니다.</h2>
+      <p>
+        "그러면 이렇게 해보자"<br />
+        회사 생활을 하며 팀원으로도, 팀장으로도 수많은 실패와 시행착오를 겪었고,<br />
+        그럴 때마다 제가 자주 했던 말입니다.<br /><br />
 
-  <!-- 4. My Strengths -->
-  <section id="strength" class="strengths">
-    <div class="section-header">
-      <h3 class="section-sub">My Strengths</h3>
-      <h2 class="section-title">다양한 업무의 시작부터 끝까지 경험을 보유한 제너럴리스트</h2>
+        먼저, 함께 일하는 동료에 대한 배려를 중요하게 생각합니다.<br />
+        “네가 생각해 봐”, “네가 알아서 해” 같은 태도보다는 먼저 아이디어와 생각을 공유하려고 노력합니다.<br />
+        물론, 단지 아이디어만 제시하는 데 그치지 않고 솔선수범하는 자세를 갖기 위해 항상 노력합니다.<br /><br />
+
+        두 번째로는 도전을 중요하게 생각합니다.<br />
+        스타트업에서 일하며 빠른 실행과 빠른 실패의 중요성을 배울 수 있었습니다.<br />
+        짧은 식견이지만 저는 모든 도전은 직접 해보지 않고는 결과를 알 수 없다고 생각합니다.<br />
+        일단 해보고 더 좋은, 발전적인 방향을 찾아 나가는 애자일 문화를 좋아합니다.<br /><br />
+
+        세 번째로는 책임감을 중요하게 생각합니다.<br />
+        “어떻게든 되겠지”, “책임자가 알아서 하겠지” 같은 태도보다는, 문제의 본질을 바라보고 해결하려 노력합니다.<br />
+        ’내 일’과 ‘네 일’이 아닌 ‘우리의 일’로써 함께 해결해 나가는 과정을 소중하게 생각합니다.
+      </p>
     </div>
-  
-    <div class="strength-cards">
-      <!-- 카드 1 -->
-      <div class="card softblue">
-        <span class="badge">사업화</span>
-        <h4>시장조사부터 서비스 판매까지</h4>
-        <p>
-          서비스 기획자, 프로젝트 매니저, 프로덕트 오너, 영업, 마케터로 근무하며 시장 조사, 서비스 설계부터 영업, 판매까지 전 과정을 진행 경험을 보유하고 있습니다.<br /><br />
-          2020년 스타트업에서 창업 멤버로 5년 이상 근무하며 서비스 기획부터 판매까지 전 과정을 담당하여, <br /><br />
-          <strong>현재 국내 400개 호텔이 사용하는 솔루션으로 성장했습니다.</strong>
-        </p>
-      </div>
-  
-      <!-- 카드 2 -->
-      <div class="card skyblue">
-        <span class="badge">문서 작업</span>
-        <h4>서류 작성과 프레젠테이션까지</h4>
-        <p>
-          다양한 지원사업의 사업계획서, 발표자료를 직접 작성하였으며, 최종 발표 및 성과 보고회 등을 진행한 경험을 가지고 있습니다.<br /><br />
-          IR, 서비스 소개서, 카달로그, 상세페이지, 웹사이트를 직접 설계 및 제작하고,
-          <strong>서비스 소개를 위한 미팅, 설명회, 전시회 관리를 진행한 경험을 가지고 있습니다.</strong>
-        </p>
-      </div>
-  
-      <!-- 카드 3 -->
-      <div class="card lightpurple">
-        <span class="badge">조직</span>
-        <h4>실무부터 팀 관리까지</h4>
-        <p>
-          기획자로써 시장조사, 와이어프레임 제작, 마케터로써 컨텐츠 제작, SNS광고 관리 등 다양한 직무에서 다양한 실무를 진행한 경험을 가지고 있습니다.<br /><br />
-          기획&마케팅&개발팀에서 6~7명의 팀원을 이끌며
-          <strong>사업&근태관리, 내/외부 일정 조율 등 팀장으로의 업무 경험</strong>을 가지고 있습니다.
-        </p>
-      </div>
+  </div>
+</section>
+
+<!-- 4. My Strengths -->
+<section id="strength" class="strengths">
+  <div class="section-header">
+    <h3 class="section-sub">My Strengths</h3>
+    <h2 class="section-title">다양한 업무의 시작부터 끝까지 경험을 보유한 제너럴리스트</h2>
+  </div>
+
+  <div class="strength-cards">
+    <!-- 카드 1 -->
+    <div class="card softblue">
+      <span class="badge">사업화</span>
+      <h4>시장조사부터 서비스 판매까지</h4>
+      <p>
+        서비스 기획자, 프로젝트 매니저, 프로덕트 오너, 영업, 마케터로 근무하며 시장 조사, 서비스 설계부터 영업, 판매까지 전 과정을 진행 경험을 보유하고 있습니다.<br /><br />
+        2020년 스타트업에서 창업 멤버로 5년 이상 근무하며 서비스 기획부터 판매까지 전 과정을 담당하여, <br /><br />
+        <strong>현재 국내 400개 호텔이 사용하는 솔루션으로 성장했습니다.</strong>
+      </p>
     </div>
-  </section>
-  
+
+    <!-- 카드 2 -->
+    <div class="card skyblue">
+      <span class="badge">문서 작업</span>
+      <h4>서류 작성과 프레젠테이션까지</h4>
+      <p>
+        다양한 지원사업의 사업계획서, 발표자료를 직접 작성하였으며, 최종 발표 및 성과 보고회 등을 진행한 경험을 가지고 있습니다.<br /><br />
+        IR, 서비스 소개서, 카달로그, 상세페이지, 웹사이트를 직접 설계 및 제작하고,
+        <strong>서비스 소개를 위한 미팅, 설명회, 전시회 관리를 진행한 경험을 가지고 있습니다.</strong>
+      </p>
+    </div>
+
+    <!-- 카드 3 -->
+    <div class="card lightpurple">
+      <span class="badge">조직</span>
+      <h4>실무부터 팀 관리까지</h4>
+      <p>
+        기획자로써 시장조사, 와이어프레임 제작, 마케터로써 컨텐츠 제작, SNS광고 관리 등 다양한 직무에서 다양한 실무를 진행한 경험을 가지고 있습니다.<br /><br />
+        기획&마케팅&개발팀에서 6~7명의 팀원을 이끌며
+        <strong>사업&근태관리, 내/외부 일정 조율 등 팀장으로의 업무 경험</strong>을 가지고 있습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- 5. Work Experience -->
 <section id="work" class="work-experience">
   <div class="work-wrapper">
@@ -152,64 +118,145 @@
       <h3 class="section-sub">Work Experience</h3>
     </div>
 
-  <div class="experience-list">
-    <!-- 1. 히어로웍스 -->
-    <div class="experience-block">
-      <h4>   ■ <a href="https://www.heroworks.co.kr/" target="_blank" class="company-link">주식회사 히어로웍스</a>
-        <span class="period">(2020.10 - 재직중)</span></h4>
-      <ul>
-        <li>기획&마케팅팀 / 팀장 <span class="period">(2020.10 - 재직중)</span></li>
-      </ul>
+    <div class="experience-list">
+      <!-- 1. 히어로웍스 -->
+      <div class="experience-block">
+        <h4> ■ <a href="https://www.heroworks.co.kr/" target="_blank" class="company-link">주식회사 히어로웍스</a>
+          <span class="period">(2020.10 - 재직중)</span>
+        </h4>
+        <ul>
+          <li>기획&마케팅팀 / 팀장 <span class="period">(2020.10 - 재직중)</span></li>
+        </ul>
+      </div>
+
+      <!-- 2. 제로웰 -->
+      <div class="experience-block">
+        <h4> ■ <a href="https://zeroweb.kr/" target="_blank" class="company-link">(주)제로웹</a>
+          <span class="period">(2018.8 - 2020.8)</span>
+        </h4>
+        <ul>
+          <li>제로고 영업팀 / 매니저 <span class="period">(2018.8 - 2019.2)</span></li>
+          <li>솔루션 전략 기획부 / 선임 매니저 <span class="period">(2019.3 - 2019.8)</span></li>
+          <li>빅데이터 협력 사업부 / 책임 매니저 <span class="period">(2019.9 - 2020.8)</span></li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<!-- 6. Skill & Tool -->
+<section id="skills" class="skills-section">
+  <h3 class="section-sub">Skill & Tool</h3>
+  <div class="skill-container">
+    <!-- MS Office -->
+    <div class="skill-card">
+      <img src="images/office.png" alt="Office" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">Word, Excel, PPT를 활용하여 다양한 문서 작업을 능숙하게 처리할 수 있습니다.</p>
     </div>
 
-    <!-- 2. 제로웰 -->
-    <div class="experience-block">
-      <h4> ■ <a href="https://zeroweb.kr/" target="_blank" class="company-link">(주)제로웹</a>
-        <span class="period">(2018.8 - 2020.8)</span></h4>
-      <ul>
-        <li>제로고 영업팀 / 매니저 <span class="period">(2018.8 - 2019.2)</span></li>
-        <li>솔루션 전략 기획부 / 선임 매니저 <span class="period">(2019.3 - 2019.8)</span></li>
-        <li>빅데이터 협력 사업부 / 책임 매니저 <span class="period">(2019.9 - 2020.8)</span></li>
-      </ul>
+    <!-- Figma -->
+    <div class="skill-card">
+      <img src="images/figma.png" alt="Figma" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">UI 디자인과 프로토타입 제작이 가능합니다.</p>
     </div>
+
+    <!-- Notion -->
+    <div class="skill-card">
+      <img src="images/notion.png" alt="Notion" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">협업 문서 작성 및 지식 관리에 능숙하게 활용할 수 있습니다.</p>
+    </div>
+
+    <!-- Slack -->
+    <div class="skill-card">
+      <img src="images/slack.png" alt="Slack" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">실시간 커뮤니케이션과 워크플로우 자동화를 유용하게 사용할 수 있습니다.</p>
+    </div>
+
+    <!-- Confluence -->
+    <div class="skill-card">
+      <img src="images/Confluence.jpg" alt="Confluence" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">프로젝트 문서화 및 팀 위키 구성에 능숙합니다.</p>
+    </div>
+
+    <!-- Jira -->
+    <div class="skill-card">
+      <img src="images/jira.png" alt="Jira" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">스프린트 및 칸반 보드 활용 등 애자일 방식의 업무 관리가 가능합니다.</p>
+    </div>
+
+    <!-- Google Drive -->
+    <div class="skill-card">
+      <img src="images/drive.png" alt="Google Drive" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">문서, 시트, 프레젠테이션 등 협업 문서 활용에 능숙합니다.</p>
+    </div>
+
+    <!-- Google Analytics -->
+    <div class="skill-card">
+      <img src="images/ga.png" alt="Google Analytics" class="skill-icon" />
+      <div class="skill-bar">
+        <div class="bar fill advanced" data-level="75%"></div>
+      </div>
+      <p class="skill-level">Advanced</p>
+      <p class="skill-desc">웹사이트 방문자 분석 및 성과 리포트 해석이 가능합니다.</p>
+    </div>
+
+
+    <!-- 필요한 만큼 반복 -->
   </div>
 </section>
 
-  <!-- 6. Skill & Tool -->
-  <section id="skills" class="skills">
-    <h3>Skill & Tool</h3>
-    <div class="skill-icons">
-      <!-- 아이콘들 반복 -->
-      <div class="icon">Office<br /><span>Advanced</span></div>
-      <div class="icon">Figma<br /><span>Advanced</span></div>
-      <!-- ... -->
-    </div>
-  </section>
 
-  <!-- 7. Service Projects -->
-  <section id="projects" class="projects">
-    <h3>Service Project</h3>
-    
-    <!-- 프로젝트 1 -->
-    <div class="project">
-      <h4>■ 데이터메니티(Datamenity)</h4>
-      <p class="small-link"><a href="#">서비스 소개 보기</a></p>
-      <p>서비스 개요 ...</p>
-      <div class="progress">
-        <!-- 기획, UI/UX 등 각 막대 -->
-      </div>
-      <div class="swiper-box">[이미지 슬라이드 영역]</div>
-    </div>
+<!-- 7. Service Projects -->
+<section id="projects" class="projects">
+  <h3>Service Project</h3>
 
-    <!-- 프로젝트 2 -->
-    <div class="project">
-      <h4>■ 리비(Revie)</h4>
-      <p class="small-link"><a href="#">서비스 소개 보기</a></p>
-      <p>서비스 개요 ...</p>
-      <div class="progress">...</div>
-      <div class="swiper-box">[이미지 슬라이드 영역]</div>
+  <!-- 프로젝트 1 -->
+  <div class="project">
+    <h4>■ 데이터메니티(Datamenity)</h4>
+    <p class="small-link"><a href="#">서비스 소개 보기</a></p>
+    <p>서비스 개요 ...</p>
+    <div class="progress">
+      <!-- 기획, UI/UX 등 각 막대 -->
     </div>
-  </section>
+    <div class="swiper-box">[이미지 슬라이드 영역]</div>
+  </div>
+
+  <!-- 프로젝트 2 -->
+  <div class="project">
+    <h4>■ 리비(Revie)</h4>
+    <p class="small-link"><a href="#">서비스 소개 보기</a></p>
+    <p>서비스 개요 ...</p>
+    <div class="progress">...</div>
+    <div class="swiper-box">[이미지 슬라이드 영역]</div>
+  </div>
+</section>
 
 <!-- 8. Contact -->
 <section id="contact" class="contact-section">
@@ -219,7 +266,6 @@
   </div>
 
   <div class="contact-container">
-    <!-- 왼쪽 정보 영역 -->
     <div class="contact-info">
       <div class="info-item">
         <span>👤</span>
@@ -244,7 +290,6 @@
       </div>
     </div>
 
-    <!-- 오른쪽 폼 영역 -->
     <div class="contact-form">
       <h4>Message me</h4>
       <form id="contact-form">
@@ -256,6 +301,73 @@
   </div>
 </section>
 
+<!-- ✅ script는 모든 HTML 요소 로딩 후 실행되게 body 하단에 위치 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 카드 애니메이션
+    const cards = document.querySelectorAll('.card');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(card => cardObserver.observe(card));
 
+    // 숙련도 그래프 애니메이션
+    const skillSection = document.querySelector(".skills-section");
+    const bars = document.querySelectorAll(".bar.fill");
+    let animated = false;
+
+    const animateSkillBars = () => {
+      if (animated) return;
+      bars.forEach(bar => {
+        const level = bar.getAttribute("data-level");
+        if (level) bar.style.width = level;
+      });
+      animated = true;
+    };
+
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateSkillBars();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    if (skillSection) {
+      skillObserver.observe(skillSection);
+    }
+
+    // Contact form 전송
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const data = new FormData(contactForm);
+        fetch("https://script.google.com/macros/s/AKfycbwUzqF5IIlPxOG7t0WUkLPYKfdcVfNQKHEt29sLvdcYBaZxQNoi0Tz8AkmH7bW4pOFN6w/exec", {
+          method: "POST",
+          body: data
+        })
+          .then(res => res.text())
+          .then(result => {
+            if (result === "success") {
+              alert("메시지가 전송되었습니다!");
+              contactForm.reset();
+            } else {
+              alert("전송에 실패했습니다.");
+            }
+          })
+          .catch(err => {
+            alert("오류가 발생했습니다.");
+            console.error(err);
+          });
+      });
+    }
+  });
+</script>
 </body>
+
 </html>

@@ -309,18 +309,65 @@ html {
 }
   
   /* Skills */
-  .skills .skill-icons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+  .skills-section {
+    background: #fff;
+    padding: 100px 20px;
+    text-align: center;
   }
   
-  .skill-icons .icon {
-    text-align: center;
-    font-size: 14px;
-    padding: 10px;
+  .skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
   }
+  
+  .skill-card {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 300px; /* ✅ 높이 확보 (선택) */
+    position: relative;
+  }
+  
+  .skill-icon {
+    width: 80px;         /* ✅ 이미지 크기 */
+    height: 80px;         /* ✅ 이미지 - 그래프 간격 조절 */
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    background: #e0e0e0;
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .bar.fill {
+    height: 100%;
+    width: 0; /* 애니메이션용 초기값 */
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: width 1.2s ease-in-out;
+  }
+  
+  .skill-level {
+    font-weight: bold;
+    margin: 8px 0;
+  }
+  
+  .skill-desc {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+  }
+  
 
     /* contact */
     .contact-section {
