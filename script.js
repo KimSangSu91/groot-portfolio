@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (animated) return;
     bars.forEach((bar, idx) => {
       const level = bar.getAttribute("data-level");
-      console.log(`Bar ${idx + 1} → level:`, level);  // ✅ 콘솔 확인용
+      console.log(`Bar ${idx + 1} → level:`, level);  // 확인용
       if (level) {
         bar.style.width = level;
-        bar.style.backgroundColor = 'red';  // ✅ 확인용 색상
+        bar.style.backgroundColor = 'red'; // 확인용 색상
       }
     });
     animated = true;
@@ -40,7 +40,33 @@ document.addEventListener("DOMContentLoaded", () => {
     skillObserver.observe(skillSection);
   }
 
-  // contact-form 전송 처리
+  // ✅ 프로젝트 슬라이더
+  document.querySelectorAll(".slider").forEach(slider => {
+    const slides = slider.querySelectorAll(".slide");
+    const prevBtn = slider.querySelector(".prev");
+    const nextBtn = slider.querySelector(".next");
+
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[index].classList.add("active");
+    };
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    showSlide(currentIndex);
+  });
+
+  // ✅ contact-form 전송
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
