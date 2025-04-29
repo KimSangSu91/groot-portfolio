@@ -504,7 +504,7 @@ html {
     
     .slider {
       position: relative;
-      width: 100%;
+      width: 800px;
       height: auto;
       background-color: #eee;
       margin-bottom: 20px;
@@ -514,7 +514,7 @@ html {
       display: none;
       width: 100%;               /* 부모(slider)에 꽉 차게 */
       height: 350px;              /* ✅ 고정된 높이로 맞추기 */
-      object-fit: contain;          /* ✅ 비율 유지하면서 꽉 채우기 (잘림 있음) */
+      object-fit: cover;          /* ✅ 비율 유지하면서 꽉 채우기 (잘림 있음) */
     }
     
     .slider img.active {
