@@ -467,14 +467,14 @@ html {
       margin: 0 10px;
     }
     
-    .contributions .bar-fill {
-      height: 100%;
-      background-color: #007bff;
-      transition: width 1.2s ease-in-out; /* ✅ 애니메이션 추가 */
-      border-radius: 5px;
-      width: 0; /* ✅ 초기값은 0% */
-    }
-    
+ .contributions .bar-fill {
+  height: 100%;
+  background-color: #007bff;
+  transition: width 1.2s ease-in-out; /* ✅ 애니메이션 추가 */
+  border-radius: 5px;
+  width: 0; /* ✅ 초기값은 0% */
+}
+
     
     .contributions .percentage {
       font-size: 14px;
@@ -504,7 +504,7 @@ html {
     
     .slider {
       position: relative;
-      width: 800px;
+      width: 100%;
       height: auto;
       background-color: #eee;
       margin-bottom: 20px;
@@ -514,7 +514,7 @@ html {
       display: none;
       width: 100%;               /* 부모(slider)에 꽉 차게 */
       height: 350px;              /* ✅ 고정된 높이로 맞추기 */
-      object-fit: cover;          /* ✅ 비율 유지하면서 꽉 채우기 (잘림 있음) */
+      object-fit: contain;          /* ✅ 비율 유지하면서 꽉 채우기 (잘림 있음) */
     }
     
     .slider img.active {
