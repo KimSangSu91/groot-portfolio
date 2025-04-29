@@ -394,15 +394,26 @@ html {
       margin-bottom: 80px;
     }
 
-    .project-subtitle {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 16px;
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px; /* 기존 .project-subtitle 여백 대체 */
+    }
+    
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background-color: #e7f0ff;  /* 연한 파랑 (수정 가능) */
+      color: #007bff;
+      font-size: 13px;
+      border-radius: 999px;
       font-weight: 500;
+      white-space: nowrap;
     }
     
     .project-section-title {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       margin: 32px 0 20px;
       color: #111;
@@ -414,11 +425,12 @@ html {
     
     .project-info {
       flex: 0 0 40%;            /* ✅ 좌측 텍스트 영역: 유연하게 반응 */
+      font-size: 18px;
       min-width: 280px;
     }
     
     .project-description {
-      font-size: 14px;
+      font-size: 15px;
       color: #333;
       line-height: 1.7;            /* ✅ 줄간격 넉넉하게 */
       letter-spacing: -0.02em;     /* ✅ 자간 살짝 좁게 */
@@ -458,9 +470,11 @@ html {
     .contributions .bar-fill {
       height: 100%;
       background-color: #007bff;
-      transition: width 1s ease-in-out;
+      transition: width 1.2s ease-in-out; /* ✅ 애니메이션 추가 */
       border-radius: 5px;
+      width: 0; /* ✅ 초기값은 0% */
     }
+    
     
     .contributions .percentage {
       font-size: 14px;
@@ -493,13 +507,14 @@ html {
       width: 100%;
       height: auto;
       background-color: #eee;
+      margin-bottom: 20px;
     }
     
     .slider img {
       display: none;
-      width: 100%;
-      max-height: 500px;      /* ✅ 높이 제한 */
-      object-fit: contain;
+      width: 100%;               /* 부모(slider)에 꽉 차게 */
+      height: 350px;              /* ✅ 고정된 높이로 맞추기 */
+      object-fit: contain;          /* ✅ 비율 유지하면서 꽉 채우기 (잘림 있음) */
     }
     
     .slider img.active {
@@ -532,24 +547,19 @@ html {
     
     .link-button {
       text-decoration: none;
-      padding: 6px 16px;
+      padding: 8px 16px;
       font-size: 14px;
-      background: #ddd;
+      background: #4f81f7; /* ✅ 기본 파란색 */
+      color: #fff;
       border-radius: 16px;
       transition: background 0.3s;
     }
     
     .link-button:hover {
-      background: #ccc;
+  background: #3467d6; /* ✅ 호버 시 더 진한 파랑 */
     }
     
-    .link-button.blue {
-      background-color: #007bff;
-      color: #fff;
-    }
     
-
-
     /* contact */
     .contact-section {
         padding: 100px 40px;

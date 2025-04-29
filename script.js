@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("connected!");
+
   // 카드 애니메이션
   const cards = document.querySelectorAll('.card');
   const observer = new IntersectionObserver((entries) => {
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(`Bar ${idx + 1} → level:`, level);  // 확인용
       if (level) {
         bar.style.width = level;
-        bar.style.backgroundColor = 'red'; // 확인용 색상
+        //bar.style.backgroundColor = 'blue'; // 확인용 색상
       }
     });
     animated = true;
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ✅ 프로젝트 슬라이더
-  document.querySelectorAll(".slider").forEach(slider => {
+  document.querySelectorAll(".slider").forEach((slider, sliderIndex) => {
     const slides = slider.querySelectorAll(".slide");
     const prevBtn = slider.querySelector(".prev");
     const nextBtn = slider.querySelector(".next");
@@ -49,16 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
 
     const showSlide = (index) => {
-      slides.forEach(slide => slide.classList.remove("active"));
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+      });
       slides[index].classList.add("active");
     };
 
     prevBtn.addEventListener("click", () => {
+      console.log("prev click");
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
       showSlide(currentIndex);
     });
 
     nextBtn.addEventListener("click", () => {
+      console.log("next click");
       currentIndex = (currentIndex + 1) % slides.length;
       showSlide(currentIndex);
     });
@@ -66,7 +72,37 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentIndex);
   });
 
-  // ✅ contact-form 전송
+  // ✅ 프로젝트 참여율 애니메이션
+const projectSection = document.querySelector("#projects");
+const projectBars = document.querySelectorAll(".contributions .bar-fill");
+let projectAnimated = false;
+
+const animateProjectBars = () => {
+  if (projectAnimated) return;
+  projectBars.forEach(bar => {
+    const level = bar.getAttribute("data-level"); // ← 여기서 값 읽고
+    bar.style.width = "0%"; // 초기화
+    setTimeout(() => {
+      bar.style.width = level; // 애니메이션으로 채우기
+    }, 50);
+  });
+  projectAnimated = true;
+};
+
+const projectObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateProjectBars();
+    }
+  });
+}, { threshold: 0.3 });
+
+if (projectSection) {
+  projectObserver.observe(projectSection);
+}
+
+
+  // ✅ contact-form 전송 (반드시 DOMContentLoaded 안에 있어야 작동)
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
