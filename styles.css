@@ -176,6 +176,11 @@ html {
 }
 
 /* Strengths */
+
+.work-header {
+  text-align: center;
+}
+
 .strengths {
   background: #fff;
   padding: 100px 20px;
