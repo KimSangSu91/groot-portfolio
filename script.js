@@ -42,6 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
     skillObserver.observe(skillSection);
   }
 
+  // ✅ work experience
+  document.querySelectorAll(".company-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      // 버튼 강조
+      document.querySelectorAll(".company-btn").forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+  
+      // 회사 설명 표시
+      const company = button.dataset.company;
+      document.querySelectorAll(".company-info").forEach(info => {
+        info.style.display = "none";
+      });
+      document.getElementById(company).style.display = "block";
+    });
+  });
+  
+
   // ✅ 프로젝트 슬라이더
   document.querySelectorAll(".slider").forEach((slider, sliderIndex) => {
     const slides = slider.querySelectorAll(".slide");
