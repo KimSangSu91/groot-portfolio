@@ -421,7 +421,7 @@ html {
 
 
 
-/* project */
+/* main project */
 .project-section {
   padding: 60px 200px;
 }
@@ -615,6 +615,79 @@ html {
 .link-button:hover {
   background: #3467d6;
   /* ✅ 호버 시 더 진한 파랑 */
+}
+
+/* sub project */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-card {
+  width: 400px;
+  /* 높이는 내용에 따라 자동 */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 250px; /* 고정 높이 */
+  object-fit: cover; /* 크기 유지하면서 잘라냄 */
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.toggle-button {
+  margin-top: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.project-description {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.project-description.show {
+  display: block;
 }
 
 

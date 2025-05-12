@@ -113,10 +113,33 @@ const projectObserver = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.3 });
-
+// ✅ 이 부분만 rAF로 감싸면 완벽
 if (projectSection) {
-  projectObserver.observe(projectSection);
+  requestAnimationFrame(() => {
+    projectObserver.observe(projectSection);
+  });
+
+  // ✅ 추가 보조: scroll 이벤트로도 강제 실행
+  window.addEventListener("scroll", () => {
+    if (projectAnimated) return;
+    const rect = projectSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.7) {
+      animateProjectBars();
+    }
+  });
 }
+
+   // ✅ 텍스트 기반 프로젝트 상세내용 토글
+  document.querySelectorAll(".toggle-button").forEach(button => {
+    button.addEventListener("click", () => {
+      const detail = button.nextElementSibling;
+      detail.classList.toggle("show");
+
+      button.textContent = detail.classList.contains("show") 
+        ? "상세내용 닫기"
+        : "상세내용 보기";
+    });
+  });
 
 
   // ✅ contact-form 전송 (반드시 DOMContentLoaded 안에 있어야 작동)
