@@ -325,13 +325,16 @@ html {
 
 .company-info p {
   font-weight: bold;
-  margin-top: 24px;       /* 팀별 이력 간 간격 */
+  margin-top: 24px;
+  /* 팀별 이력 간 간격 */
   margin-bottom: 8px;
 }
 
 .company-info ul {
-  margin-bottom: 16px;     /* 리스트 간 간격 */
-  line-height: 1.8;        /* 줄간격 넉넉하게 */
+  margin-bottom: 16px;
+  /* 리스트 간 간격 */
+  line-height: 1.8;
+  /* 줄간격 넉넉하게 */
 }
 
 
@@ -426,6 +429,9 @@ html {
   padding: 60px 200px;
 }
 
+.project-section .section-sub {
+  text-align: center;
+}
 
 .project-block {
   display: flex;
@@ -489,7 +495,9 @@ html {
 
 
 .project-image-area {
-  margin-top: 100px;
+  align-self: flex-start;
+  /* ✅ 수직 상단 정렬 */
+  margin-top: 70px;
   /* ✅ 이미지 영역을 아래로 내림 */
   flex: 1;
   max-width: 1000px;
@@ -567,7 +575,7 @@ html {
   display: none;
   width: 100%;
   /* 부모(slider)에 꽉 차게 */
-  height: 350px;
+  height: 300px;
   /* ✅ 고정된 높이로 맞추기 */
   object-fit: contain;
   /* ✅ 비율 유지하면서 꽉 채우기 (잘림 있음) */
@@ -593,6 +601,36 @@ html {
 
 .slider .next {
   right: 10px;
+}
+
+.project-highlight-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #4f81f7;
+  /* 연한 파란색 강조 (원하시면 변경 가능) */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  /* 선택: 소문자를 대문자로 */
+  letter-spacing: 0.5px;
+}
+
+.project-highlights {
+  margin-top: 5px;
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #333;
+}
+
+.project-highlights li {
+  margin-bottom: 8px;
+}
+
+.project-highlights .link-icon {
+  margin-left: 6px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .project-links {
@@ -643,8 +681,10 @@ html {
 
 .project-image {
   width: 100%;
-  height: 250px; /* 고정 높이 */
-  object-fit: cover; /* 크기 유지하면서 잘라냄 */
+  height: 250px;
+  /* 고정 높이 */
+  object-fit: cover;
+  /* 크기 유지하면서 잘라냄 */
   border-radius: 6px;
   margin-bottom: 10px;
 }
@@ -684,6 +724,7 @@ html {
   font-size: 0.95rem;
   color: #333;
   transition: all 0.3s ease;
+  line-height: 1.6;
 }
 
 .project-description.show {
@@ -724,13 +765,13 @@ html {
 
 .sub-project-title {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .sub-project-info p {
-  margin: 4px 0;
+  margin: 5px 0;
   font-size: 0.95rem;
   color: #444;
 }
@@ -757,6 +798,8 @@ html {
   font-size: 0.95rem;
   color: #333;
   transition: all 0.3s ease;
+  line-height: 1.6;
+
 }
 
 .sub-project-description.show {
