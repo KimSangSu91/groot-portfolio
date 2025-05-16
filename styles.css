@@ -642,11 +642,11 @@ html {
 .link-button {
   text-decoration: none;
   padding: 8px 16px;
-  font-size: 14px;
-  background: #4f81f7;
+  font-size: 0.9rem;
+  background: #007bff;
   /* ✅ 기본 파란색 */
   color: #fff;
-  border-radius: 16px;
+  border-radius: 5px;
   transition: background 0.3s;
 }
 
@@ -869,6 +869,25 @@ html {
   flex: 1;
   min-width: 280px;
 }
+
+.sns-links a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.sns-links a i {
+  margin-right: 4px;
+  font-size: 15px;
+  vertical-align: middle;
+  color: #4f81f7;
+}
+
+.sns-links a:hover {
+  text-decoration: underline;
+}
+
 
 .contact-info h3 {
   font-weight: 700;
