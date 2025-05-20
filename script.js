@@ -133,6 +133,7 @@ if (projectSection) {
 document.querySelectorAll(".sub-toggle-button").forEach(button => {
   button.addEventListener("click", () => {
     const detail = button.nextElementSibling;
+
     detail.classList.toggle("show");
 
     button.textContent = detail.classList.contains("show") 

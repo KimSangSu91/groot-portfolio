@@ -758,6 +758,7 @@ html {
   padding: 0px 20px;
   max-width: 1200px;
   margin: auto;
+  align-items: start; 
 }
 
 .sub-project-card {
