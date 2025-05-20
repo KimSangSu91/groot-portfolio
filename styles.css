@@ -825,7 +825,14 @@ html {
   color: #333;
   transition: all 0.3s ease;
   line-height: 1.6;
+}
 
+.sub-project-description p {
+  margin-bottom: 4px;
+}
+
+.sub-project-description ul {
+  margin-top: 0;
 }
 
 .sub-project-description.show {
