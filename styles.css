@@ -754,7 +754,7 @@ html {
 .sub-project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 50px;
+  gap: 80px;
   padding: 0px 20px;
   max-width: 1200px;
   margin: auto;
@@ -771,7 +771,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px;
+  padding: 30px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -838,6 +838,82 @@ html {
 
 .sub-project-description.show {
   display: block;
+}
+
+
+/* photo-gallery */
+.gallery-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  will-change: transform;
+  width: fit-content; /* ✅ 이미지 개수에 따라 유동적으로 넓이 설정 */
+}
+
+.gallery-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent; /* 기존 f9f9f9 → 제거 */
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: #444;
+  padding: 10px;
+  background-color: transparent; /* ✅ 배경 제거 */
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;         /* ❌ 배경 제거 */
+  border: none;
+  font-size: 3rem;          /* 아이콘 크기 */
+  color: #bbbbbb;              /* 색상 */
+  cursor: pointer;
+  z-index: 1;
+  padding: 0;
+}
+
+.gallery-btn:hover {
+  color: #000;              /* 호버 시 진하게 */
+}
+
+.gallery-prev {
+  left: -50px;              /* 사진 영역 외부에 배치 */
+}
+
+.gallery-next {
+  right: -50px;
 }
 
 

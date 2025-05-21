@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // 버튼 강조
       document.querySelectorAll(".company-btn").forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
-  
+
       // 회사 설명 표시
       const company = button.dataset.company;
       document.querySelectorAll(".company-info").forEach(info => {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById(company).style.display = "block";
     });
   });
-  
+
 
   // ✅ 프로젝트 슬라이더
   document.querySelectorAll(".slider").forEach((slider, sliderIndex) => {
@@ -90,57 +90,57 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ✅ 프로젝트 참여율 애니메이션
-const projectSection = document.querySelector("#projects");
-const projectBars = document.querySelectorAll(".contributions .bar-fill");
-let projectAnimated = false;
+  const projectSection = document.querySelector("#projects");
+  const projectBars = document.querySelectorAll(".contributions .bar-fill");
+  let projectAnimated = false;
 
-const animateProjectBars = () => {
-  if (projectAnimated) return;
-  projectBars.forEach(bar => {
-    const level = bar.getAttribute("data-level"); // ← 여기서 값 읽고
-    bar.style.width = "0%"; // 초기화
-    setTimeout(() => {
-      bar.style.width = level; // 애니메이션으로 채우기
-    }, 50);
-  });
-  projectAnimated = true;
-};
-
-const projectObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateProjectBars();
-    }
-  });
-}, { threshold: 0.3 });
-// ✅ 이 부분만 rAF로 감싸면 완벽
-if (projectSection) {
-  requestAnimationFrame(() => {
-    projectObserver.observe(projectSection);
-  });
-
-  // ✅ 추가 보조: scroll 이벤트로도 강제 실행
-  window.addEventListener("scroll", () => {
+  const animateProjectBars = () => {
     if (projectAnimated) return;
-    const rect = projectSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.7) {
-      animateProjectBars();
-    }
+    projectBars.forEach(bar => {
+      const level = bar.getAttribute("data-level"); // ← 여기서 값 읽고
+      bar.style.width = "0%"; // 초기화
+      setTimeout(() => {
+        bar.style.width = level; // 애니메이션으로 채우기
+      }, 50);
+    });
+    projectAnimated = true;
+  };
+
+  const projectObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateProjectBars();
+      }
+    });
+  }, { threshold: 0.3 });
+  // ✅ 이 부분만 rAF로 감싸면 완벽
+  if (projectSection) {
+    requestAnimationFrame(() => {
+      projectObserver.observe(projectSection);
+    });
+
+    // ✅ 추가 보조: scroll 이벤트로도 강제 실행
+    window.addEventListener("scroll", () => {
+      if (projectAnimated) return;
+      const rect = projectSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.7) {
+        animateProjectBars();
+      }
+    });
+  }
+
+  // ✅ 서브 프로젝트 토글 버튼
+  document.querySelectorAll(".sub-toggle-button").forEach(button => {
+    button.addEventListener("click", () => {
+      const detail = button.nextElementSibling;
+
+      detail.classList.toggle("show");
+
+      button.textContent = detail.classList.contains("show")
+        ? "상세내용 닫기"
+        : "상세내용 보기";
+    });
   });
-}
-
-// ✅ 서브 프로젝트 토글 버튼
-document.querySelectorAll(".sub-toggle-button").forEach(button => {
-  button.addEventListener("click", () => {
-    const detail = button.nextElementSibling;
-
-    detail.classList.toggle("show");
-
-    button.textContent = detail.classList.contains("show") 
-      ? "상세내용 닫기"
-      : "상세내용 보기";
-  });
-});
 
 
   // ✅ contact-form 전송 (반드시 DOMContentLoaded 안에 있어야 작동)
@@ -167,5 +167,65 @@ document.querySelectorAll(".sub-toggle-button").forEach(button => {
           console.error(err);
         });
     });
-  }
-});
+
+  // 갤러리 슬라이드 (기본 3장 보기 기준)
+  const track = document.querySelector(".gallery-track");
+  const cards = document.querySelectorAll(".gallery-card");
+  const prevBtn = document.querySelector(".gallery-prev");
+  const nextBtn = document.querySelector(".gallery-next");
+
+  const visibleCount = 3;
+  let currentIndex = 0;
+
+  const updateGallery = () => {
+    const cardWidth = cards[0].offsetWidth + 20;
+    // 최대 이동 인덱스를 카드 전체 - 보여지는 수로 보정
+    const maxIndex = cards.length - visibleCount;
+    if (currentIndex < 0) currentIndex = maxIndex;
+    if (currentIndex > maxIndex) currentIndex = 0;
+
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  };
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    updateGallery();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    updateGallery();
+  });
+
+  // ✅ 자동 전환
+  setInterval(() => {
+    currentIndex++;
+    updateGallery();
+  }, 3000);
+
+  // ✅ 드래그 이동
+  let isDragging = false;
+  let startX = 0;
+
+  track.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX;
+    track.classList.add("dragging");
+  });
+
+  document.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    const diff = e.pageX - startX;
+
+    if (diff > 50) {
+      currentIndex--;
+    } else if (diff < -50) {
+      currentIndex++;
+    }
+
+    updateGallery();
+    isDragging = false;
+    track.classList.remove("dragging"); // ✅ 이 줄이 누락되어 있었음
+  }); 
+}  
+}); 
