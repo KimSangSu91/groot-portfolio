@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       const data = new FormData(contactForm);
-      fetch("https://script.google.com/macros/s/🟦배포URL🟦/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbwUzqF5IIlPxOG7t0WUkLPYKfdcVfNQKHEt29sLvdcYBaZxQNoi0Tz8AkmH7bW4pOFN6w/exec", {
         method: "POST",
         body: data
       })
@@ -168,64 +168,84 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-  // 갤러리 슬라이드 (기본 3장 보기 기준)
-  const track = document.querySelector(".gallery-track");
-  const cards = document.querySelectorAll(".gallery-card");
-  const prevBtn = document.querySelector(".gallery-prev");
-  const nextBtn = document.querySelector(".gallery-next");
+    // 갤러리 슬라이드 (기본 3장 보기 기준)
+    const track = document.querySelector(".gallery-track");
+    const cards = document.querySelectorAll(".gallery-card");
+    const prevBtn = document.querySelector(".gallery-prev");
+    const nextBtn = document.querySelector(".gallery-next");
 
-  const visibleCount = 3;
-  let currentIndex = 0;
+    const visibleCount = 3;
+    let currentIndex = 0;
 
-  const updateGallery = () => {
-    const cardWidth = cards[0].offsetWidth + 20;
-    // 최대 이동 인덱스를 카드 전체 - 보여지는 수로 보정
-    const maxIndex = cards.length - visibleCount;
-    if (currentIndex < 0) currentIndex = maxIndex;
-    if (currentIndex > maxIndex) currentIndex = 0;
+    const updateGallery = () => {
+      const cardWidth = cards[0].offsetWidth + 20;
+      // 최대 이동 인덱스를 카드 전체 - 보여지는 수로 보정
+      const maxIndex = cards.length - visibleCount;
+      if (currentIndex < 0) currentIndex = maxIndex;
+      if (currentIndex > maxIndex) currentIndex = 0;
 
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  };
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    };
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex--;
-    updateGallery();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex++;
-    updateGallery();
-  });
-
-  // ✅ 자동 전환
-  setInterval(() => {
-    currentIndex++;
-    updateGallery();
-  }, 3000);
-
-  // ✅ 드래그 이동
-  let isDragging = false;
-  let startX = 0;
-
-  track.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startX = e.pageX;
-    track.classList.add("dragging");
-  });
-
-  document.addEventListener("mouseup", (e) => {
-    if (!isDragging) return;
-    const diff = e.pageX - startX;
-
-    if (diff > 50) {
+    prevBtn.addEventListener("click", () => {
       currentIndex--;
-    } else if (diff < -50) {
-      currentIndex++;
-    }
+      updateGallery();
+    });
 
-    updateGallery();
-    isDragging = false;
-    track.classList.remove("dragging"); // ✅ 이 줄이 누락되어 있었음
-  }); 
-}  
+    nextBtn.addEventListener("click", () => {
+      currentIndex++;
+      updateGallery();
+    });
+
+    // ✅ 자동 전환
+    setInterval(() => {
+      currentIndex++;
+      updateGallery();
+    }, 3000);
+
+    // ✅ 드래그 이동
+    let isDragging = false;
+    let startX = 0;
+
+    track.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.pageX;
+      track.classList.add("dragging");
+    });
+
+    document.addEventListener("mouseup", (e) => {
+      if (!isDragging) return;
+      const diff = e.pageX - startX;
+
+      if (diff > 50) {
+        currentIndex--;
+      } else if (diff < -50) {
+        currentIndex++;
+      }
+
+      updateGallery();
+      isDragging = false;
+      track.classList.remove("dragging"); // ✅ 이 줄이 누락되어 있었음
+    });
+
+    // 맨 위로 버튼 기능
+    const scrollTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    // 이 위에 추가
+  }
 }); 

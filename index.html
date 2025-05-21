@@ -954,11 +954,11 @@
             <img src="images/gallery6.jpg" alt="강연" />
             <p class="caption">2020 부산 경영인 네트워킹 행사 </p>
           </div>
-                    <div class="gallery-card">
+          <div class="gallery-card">
             <img src="images/gallery7.jpg" alt="강연" />
             <p class="caption">2021 HEROWORKS Workshop</p>
           </div>
-                    <div class="gallery-card">
+          <div class="gallery-card">
             <img src="images/gallery8.jpg" alt="강연" />
             <p class="caption">2023 베트남 커뮤니케이션 출장</p>
           </div>
@@ -1028,75 +1028,11 @@
       </div>
     </div>
   </section>
-
-  <!-- ✅ script는 모든 HTML 요소 로딩 후 실행되게 body 하단에 위치 -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // 카드 애니메이션
-      const cards = document.querySelectorAll('.card');
-      const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      }, { threshold: 0.1 });
-      cards.forEach(card => cardObserver.observe(card));
-
-      // 숙련도 그래프 애니메이션
-      const skillSection = document.querySelector(".skills-section");
-      const bars = document.querySelectorAll(".bar.fill");
-      let animated = false;
-
-      const animateSkillBars = () => {
-        if (animated) return;
-        bars.forEach(bar => {
-          const level = bar.getAttribute("data-level");
-          if (level) bar.style.width = level;
-        });
-        animated = true;
-      };
-
-      const skillObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateSkillBars();
-          }
-        });
-      }, { threshold: 0.3 });
-
-      if (skillSection) {
-        skillObserver.observe(skillSection);
-      }
-
-      // Contact form 전송
-      const contactForm = document.getElementById('contact-form');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const data = new FormData(contactForm);
-          fetch("https://script.google.com/macros/s/AKfycbwUzqF5IIlPxOG7t0WUkLPYKfdcVfNQKHEt29sLvdcYBaZxQNoi0Tz8AkmH7bW4pOFN6w/exec", {
-            method: "POST",
-            body: data
-          })
-            .then(res => res.text())
-            .then(result => {
-              if (result === "success") {
-                alert("메시지가 전송되었습니다!");
-                contactForm.reset();
-              } else {
-                alert("전송에 실패했습니다.");
-              }
-            })
-            .catch(err => {
-              alert("오류가 발생했습니다.");
-              console.error(err);
-            });
-        });
-      }
-    });
-  </script>
   <script src="script.js"></script>
+
+
+  <!-- 맨 위로 버튼 -->
+  <button id="scrollToTopBtn" title="맨 위로" class="scroll-top">↑</button>
 </body>
 
 </html>
