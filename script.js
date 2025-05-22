@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       updateGallery();
       isDragging = false;
-      track.classList.remove("dragging"); // ✅ 이 줄이 누락되어 있었음
+      track.classList.remove("dragging"); // 
     });
 
     // 맨 위로 버튼 기능
@@ -245,6 +245,18 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "smooth"
       });
     });
+
+    // script.js (이미 연결된 경우 여기에 추가)
+    const toggleBtn = document.getElementById("dark-mode-toggle");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        const icon = toggleBtn.querySelector("i");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+      });
+    }
 
     // 이 위에 추가
   }

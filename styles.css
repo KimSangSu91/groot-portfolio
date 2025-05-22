@@ -7,32 +7,274 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 메인 헤더 */
 .main-header {
   background-color: #4f81f7;
-  padding: 12px 20px;
-  /* ✅ 기존보다 살짝 줄임 */
+  padding: 25px 200px;
   position: fixed;
-  /* ✅ 고정 */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  /* ✅ 다른 요소보다 위에 있도록 */
 }
 
-.main-header ul {
+/* 메뉴 + 버튼 수평 정렬 */
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 메뉴 가로 정렬 */
+.menu {
   display: flex;
   gap: 40px;
-  justify-content: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.main-header a {
+/* 메뉴 항목 */
+.menu a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
 }
 
+/* 🌙 버튼 */
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  z-index: 1000;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.dark-toggle i {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+body.dark-mode .dark-toggle i.fa-sun {
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+.dark-toggle i.fa-moon {
+  opacity: 1;
+}
+
+/* 다크모드 */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* 모든 section 기본 어둡게 */
+body.dark-mode section,
+body.dark-mode .card,
+body.dark-mode .project-info,
+body.dark-mode .project-image-area,
+body.dark-mode .contact-section,
+body.dark-mode .gallery-section,
+body.dark-mode .skills-section,
+body.dark-mode .work-experience,
+body.dark-mode .strengths {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* 헤더 */
+body.dark-mode .main-header {
+  background-color: #1a1a1a;
+}
+body.dark-mode .menu a,
+body.dark-mode .dark-toggle {
+  color: #ffffff;
+}
+
+/* 카드 배경 & 텍스트 */
+body.dark-mode .card,
+body.dark-mode .softblue,
+body.dark-mode .skyblue,
+body.dark-mode .lightpurple {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+body.dark-mode .card h4 {
+  color: #80bfff;
+}
+
+/* 배지 */
+body.dark-mode .badge {
+  background-color: #444;
+  color: #fff;
+}
+
+/* 프로젝트 텍스트 강조 */
+body.dark-mode .project-section-title,
+body.dark-mode .project-highlight-title {
+  color: #80bfff;
+}
+
+/* 링크 & 버튼 */
+body.dark-mode a {
+  color: #80bfff;
+}
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .link-button,
+body.dark-mode .toggle-button,
+body.dark-mode .sub-toggle-button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+body.dark-mode .link-button:hover,
+body.dark-mode .toggle-button:hover,
+body.dark-mode .sub-toggle-button:hover {
+  background-color: #555;
+}
+
+/* input & textarea */
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #aaa;
+}
+
+/* 슬라이더 버튼 */
+body.dark-mode .slider button {
+  color: #eee;
+}
+
+/* 갤러리 설명 */
+body.dark-mode .gallery-card .caption {
+  color: #ccc;
+}
+
+/* footer */
+body.dark-mode .footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+}
+
+/* 스크롤 탑 버튼 */
+body.dark-mode .scroll-top {
+  background-color: #444;
+  color: white;
+}
+body.dark-mode .scroll-top:hover {
+  background-color: #666;
+}
+
+/* 전역 텍스트 기본값 */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .tag {
+  background-color: #333;  /* 어두운 회색 배경 */
+  color: #80bfff;          /* 밝은 파란색 텍스트 */
+  border: 1px solid #555;  /* 경계가 조금 보이게 */
+}
+
+/* 기존에 색상 강제 지정된 텍스트도 덮어쓰기 */
+body.dark-mode .text p,
+body.dark-mode .card p,
+body.dark-mode .card p strong,
+body.dark-mode .section-title,
+body.dark-mode .section-sub,
+body.dark-mode .company-info,
+body.dark-mode .project-description,
+body.dark-mode .project-info,
+body.dark-mode .sub-project-description,
+body.dark-mode .project-title,
+body.dark-mode .sub-project-title,
+body.dark-mode .caption,
+body.dark-mode .contact-info p,
+body.dark-mode .skill-level,
+body.dark-mode .skill-desc,
+body.dark-mode .bar-fill,
+body.dark-mode .project-highlight-title,
+body.dark-mode .project-highlights li,
+body.dark-mode .contributions .percentage,
+body.dark-mode .contributions span:first-child {
+  color: #e0e0e0 !important;
+}
+body.dark-mode .project-description,
+body.dark-mode .project-highlights,
+body.dark-mode .project-info,
+body.dark-mode .project-info p,
+body.dark-mode .project-title,
+body.dark-mode .project-section-title,
+body.dark-mode .tag {
+  color: #f5f5f5 !important;
+}
+body.dark-mode .sub-project-card {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #333;
+}
+
+body.dark-mode .sub-project-card p,
+body.dark-mode .sub-project-title,
+body.dark-mode .sub-project-meta,
+body.dark-mode .sub-project-period,
+body.dark-mode .sub-project-role,
+body.dark-mode .sub-project-description {
+  color: #f5f5f5;
+}
+
+body.dark-mode .sub-tag {
+  background-color: #333;
+  color: #80bfff;
+}
+
+
+/* 강조용 텍스트는 밝은 파랑으로 */
+body.dark-mode .section-title,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode .card h4 {
+  color: #80bfff !important;
+}
+
+/* 링크 컬러 */
+body.dark-mode a {
+  color: #80bfff;
+}
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .skill-icon {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+
+
+/* intro */
 .intro {
   height: 85vh;
   /* ✅ 브라우저 높이에 딱 맞게! */
@@ -193,14 +435,14 @@ html {
 
 
 .section-sub {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   color: #4f81f7;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .section-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   color: #111;
   margin-bottom: 50px;
@@ -301,15 +543,19 @@ html {
   padding: 25px;
   font-size: 16px;
   background-color: #ffffff;
-  border: none;
-  border-radius: 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
   text-align: left;
   cursor: pointer;
   transition: background 0.3s;
 }
 
+.company-btn:hover {
+  border-color: #4f81f7;
+}
+
 .company-btn.active {
-  background-color: #0071c2;
+  background-color: #007bff;;
   color: white;
   font-weight: bold;
 }
@@ -567,7 +813,7 @@ html {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #eee;
+  background-color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -641,7 +887,7 @@ html {
 
 .link-button {
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 8px 14px;
   font-size: 0.9rem;
   background: #007bff;
   /* ✅ 기본 파란색 */
@@ -651,7 +897,7 @@ html {
 }
 
 .link-button:hover {
-  background: #3467d6;
+  background: #2e5bd6	;
   /* ✅ 호버 시 더 진한 파랑 */
 }
 
@@ -734,7 +980,8 @@ html {
 }
 
 .toggle-button:hover {
-  background-color: #0056b3;
+  background-color: #2e5bd6	;
+
 }
 
 .project-description {
@@ -818,7 +1065,7 @@ html {
 }
 
 .sub-toggle-button:hover {
-  background-color: #0056b3;
+  background-color: #2e5bd6;
 }
 
 .sub-project-description {
@@ -845,18 +1092,18 @@ html {
 
 /* photo-gallery */
 .gallery-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 60px 0;
   text-align: center;
   position: relative;
+  width: 100%;
+  background-color: inherit;
 }
 
 .gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: visible; /* ✅ 버튼이 영역 바깥으로 나가도록 허용 */
 }
 
 .gallery-track-wrapper {
@@ -866,11 +1113,9 @@ html {
 
 .gallery-track {
   display: flex;
-  transition: transform 0.5s ease;
   gap: 20px;
+  transition: transform 0.5s ease;
   will-change: transform;
-  width: fit-content;
-  /* ✅ 이미지 개수에 따라 유동적으로 넓이 설정 */
 }
 
 .gallery-card {
@@ -878,7 +1123,6 @@ html {
   border-radius: 10px;
   overflow: hidden;
   background-color: transparent;
-  /* 기존 f9f9f9 → 제거 */
 }
 
 .gallery-card img {
@@ -890,40 +1134,46 @@ html {
 
 .caption {
   font-size: 0.85rem;
-  color: #444;
+  color: #ccc;
   padding: 10px;
-  background-color: transparent;
-  /* ✅ 배경 제거 */
 }
 
+/* 버튼 */
 .gallery-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: none;
-  /* ❌ 배경 제거 */
   border: none;
   font-size: 3rem;
-  /* 아이콘 크기 */
   color: #bbbbbb;
-  /* 색상 */
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   padding: 0;
 }
 
 .gallery-btn:hover {
-  color: #000;
-  /* 호버 시 진하게 */
+  color: #000000;
 }
 
 .gallery-prev {
-  left: -50px;
-  /* 사진 영역 외부에 배치 */
+  left: -40px;
 }
 
 .gallery-next {
-  right: -50px;
+  right: -40px;
+}
+
+/* 반응형: 모바일에서 1~2장씩만 보여주기 */
+@media (max-width: 768px) {
+  .gallery-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .gallery-card {
+    flex: 0 0 100%;
+  }
 }
 
 
@@ -943,7 +1193,7 @@ html {
 }
 
 .contact-header .section-title {
-  font-size: 28px;
+  font-size: 20px;
   margin-bottom: 40px;
   position: relative;
   display: inline-block;
@@ -1058,7 +1308,7 @@ html {
   color: white;
   border: none;
   padding: 12px;
-  border-radius: 6px;
+  border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   width: 200px;
@@ -1068,8 +1318,28 @@ html {
 }
 
 .contact-form button:hover {
-  background: #0d6efd;
+  background: #2e5bd6	;
 }
+
+/* Footer*/
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
 
 /* 맨 위로 가기 버튼 */
 .scroll-top {
@@ -1079,7 +1349,7 @@ html {
   width: 44px;
   height: 44px;
   font-size: 20px;
-  background-color: #4f81f7;
+  background-color: #0d6efd;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1091,5 +1361,6 @@ html {
 }
 
 .scroll-top:hover {
-  background-color: #3467d6;
+  background-color: #2e5bd6;
 }
+
