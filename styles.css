@@ -438,7 +438,7 @@ body.dark-mode .skill-icon {
   font-size: 22px;
   font-weight: 700;
   color: #4f81f7;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .section-title {
@@ -684,9 +684,9 @@ body.dark-mode .skill-icon {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  gap: 100px;
-  padding: 40px;
-  margin-bottom: 80px;
+  gap: 80px;
+  padding: 0px 40px;
+  margin-bottom: 120px;
 }
 
 .project-tags {
