@@ -10,12 +10,18 @@ html {
 /* 메인 헤더 */
 .main-header {
   background-color: #4f81f7;
-  padding: 25px 40px;
+  padding: 15px 40px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+  transition: background-color 0.3s ease; /* ✅ 부드럽게 전환 */
+}
+
+/* 투명도 적용된 헤더 색상 (클래스로 토글) */
+.main-header.scrolled {
+  background-color: rgba(79, 129, 247, 0.7); /* ✅ 약간 투명한 파란색 */
 }
 
 /* 메뉴 + 버튼 수평 정렬 */
@@ -123,6 +129,10 @@ body.dark-mode .strengths {
 }
 
 /* 헤더 */
+body.dark-mode .main-header.scrolled {
+  background-color: rgba(30, 30, 30, 0.8); /* ← 다크모드도 투명하게 */
+}
+
 body.dark-mode .main-header {
   background-color: #1a1a1a;
 }

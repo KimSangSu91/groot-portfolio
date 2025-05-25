@@ -258,6 +258,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    const header = document.querySelector(".main-header");
+
+    window.addEventListener("scroll", () => {
+      console.log("스크롤 감지됨! Y값:", window.scrollY);
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
     // 이 위에 추가
   }
 }); 
