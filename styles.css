@@ -325,8 +325,18 @@ body.dark-mode .skill-icon {
   padding: 0 20px;
   margin-top: 60px;
   /* ✅ 고정된 헤더 높이만큼 밀어줌 */
-
 }
+
+#typing-text {
+  display: inline; /* ← block 대신 inline으로! */
+  text-align: center; /* 이건 span에서 크게 영향없지만, 둬도 상관없어 */
+  /* width: 100%; ← 이건 빼자 */
+}
+
+.typed-cursor {
+  display: none;
+}
+
 
 .intro h1 {
   font-size: 48px;

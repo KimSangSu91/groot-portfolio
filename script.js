@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("connected!");
+  new Typed("#typing-text", {
+    strings: ["만나서 반갑습니다.", "기획자 김상수입니다."],
+    typeSpeed: 50,        // 입력 속도
+    backSpeed: 30,        // 지우는 속도
+    backDelay: 1500,      // 입력 후 기다리는 시간
+    startDelay: 500,      // 시작 전 기다리는 시간 (선택)
+    loop: true,           // 반복
+    showCursor: true      // 커서 보이게
+  });
+  
 
   // 카드 애니메이션
   const cards = document.querySelectorAll('.card');
