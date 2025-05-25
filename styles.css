@@ -10,7 +10,7 @@ html {
 /* 메인 헤더 */
 .main-header {
   background-color: #4f81f7;
-  padding: 25px 200px;
+  padding: 25px 40px;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,6 +26,33 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  gap: 20px;
+}
+
+/* 작은 화면 (노트북, 태블릿, 모바일 등) */
+@media (max-width: 1024px) { /* 원하는 기준에 맞춰 조정 가능 */
+  .menu-wrapper {
+    justify-content: flex-start;
+    gap: 20px; /* 메뉴와 버튼 사이에 약간의 간격을 주기 */
+  }
+
+  /* 버튼을 메뉴 바로 오른쪽에 배치 */
+  .dark-toggle {
+    margin-left: auto; /* 메뉴 다음에 오른쪽으로 붙이도록 */
+  }
+}
+
+/* 추가로 모바일 최적화 */
+@media (max-width: 768px) {
+  .menu-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dark-toggle {
+    align-self: flex-end; /* 모바일에서는 버튼을 메뉴 아래쪽 오른쪽으로 */
+    margin-top: 10px;
+  }
 }
 
 /* 메뉴 가로 정렬 */
