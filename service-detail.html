@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서비스 상세 - 데이터메니티</title>
+  <link rel="stylesheet" href="service-detail.css" />
+  <style>
+    body {
+      font-family: 'Apple SD Gothic Neo', sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .home-button {
+      background: #007bff;
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .service-detail {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hero-image {
+      background: url("images/hero-datamenity.png") no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-image h1 {
+      font-size: 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    h1, h2, h3 {
+      font-weight: bold;
+      color: #111;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .summary {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .aside-box {
+      background: #f1f1f1;
+      padding: 16px;
+      border-left: 4px solid #007bff;
+      margin: 24px 0;
+    }
+
+    .aside-box.warning {
+      border-color: #ff4c4c;
+      background: #fff5f5;
+    }
+
+    .solution-list,
+    .feature-list,
+    .post-list {
+      padding-left: 20px;
+    }
+
+    .post-footer {
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+    }
+
+    .post-footer h3 {
+      margin-bottom: 12px;
+    }
+
+    .post-list li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 홈 버튼 -->
+  <header class="top-header">
+    <a href="index.html" class="home-button">홈</a>
+  </header>
+
+  <!-- 상단 이미지 제목 영역 -->
+  <div class="hero-image">
+    <h1>숙박시설 수익관리시스템 데이터메니티</h1>
+  </div>
+
+  <main class="service-detail">
+    <section class="overview">
+      <p class="subtitle">2024.07 - 2024.12 | PM</p>
+      <p class="summary">야놀자, 여기어때, 부킹닷컴 등 다양한 판매채널(OTA)에 상품을 등록하고 관리해야 하는 숙박시설이 가격을 조정하는 업무를 진행하기 위하여 수요에 영향을 주는 축제, 행사, 날씨 정보와 경쟁사 가격을 매일 서치하는 불편을 해소</p>
+    </section>
+
+    <section class="project-summary">
+      <h2>프로젝트 개요</h2>
+      <ul>
+        <li><strong>프로젝트명:</strong> 숙박시설 수익관리시스템(RMS) 데이터메니티</li>
+        <li><strong>기간:</strong> 2024.07~2024.12</li>
+        <li><strong>역할:</strong> PM</li>
+        <li><strong>요약:</strong> 다양한 판매채널에 상품을 등록하고 가격을 조정하는 과정을 자동화하여, 축제·행사·날씨·경쟁사 가격 정보를 활용해 수익 극대화</li>
+      </ul>
+    </section>
+
+    <section class="intention">
+      <h2>기획 의도</h2>
+      <h3>서비스의 시작</h3>
+      <p>데이터메니티 서비스는 코로나 19로 인해 여행업계가 피해를 입은 시점에 기획되었습니다. 우리는 코로나 같은 비상 상황에서 피해가 예상되는 산업을 돕는 솔루션을 제안하고자 숙박산업을 분석하게 되었습니다.</p>
+      <div class="aside-box">🔑 새로운 비즈니스의 조건: 코로나 피해 여부, 디지털 전환 가능성, 자본력 보유 여부</div>
+
+      <h3>문제점 발견</h3>
+      <p>호텔 지배인, 실무자, 경영자와의 인터뷰를 통해 숙박산업의 주요 문제를 확인했습니다.</p>
+      <img src="images/problem-analysis.png" alt="숙박산업의 문제점">
+
+      <div class="aside-box warning">
+        ⚠️ 숙박산업의 문제점:
+        <ul>
+          <li>OTA 영향력 증가로 가격 조정의 중요성 증가</li>
+          <li>중소형 시설의 전문 인력 부재</li>
+          <li>맞춤 솔루션 부재로 경쟁력 격차 발생</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="persona">
+      <h2>고객 페르소나 & 여정</h2>
+      <p>50~200객실 규모 중소형 호텔 운영자와 인터뷰를 통해 실존 인물을 기반으로 페르소나를 구성했습니다.</p>
+      <img src="images/persona.png" alt="페르소나와 고객 여정">
+    </section>
+
+    <section class="problem-solution">
+      <h2>문제 정의와 해결책 도출</h2>
+      <div class="aside-box warning">
+        ⚠️ 숙박산업의 구체적인 문제점:
+        <ul>
+          <li>내부 판매량 외 외부 변수(축제, 경쟁사 가격)를 수집/활용하기 어려움</li>
+          <li>데이터 분석 어려움 → 경험 기반 정성적 가격 설정</li>
+        </ul>
+      </div>
+      <ul class="solution-list">
+        <li>📊 외부 데이터를 자동 수집 및 모니터링</li>
+        <li>🧩 비전문가용 데이터 시각화 제공</li>
+        <li>🧠 AI 기반 가격 추천 시스템</li>
+      </ul>
+    </section>
+
+    <section class="market">
+      <h2>마켓 분석</h2>
+      <h3>경쟁사</h3>
+      <p>OTA Insight - 실시간 경쟁사 분석 및 시장 트렌드 제공</p>
+
+      <h3>STP 분석</h3>
+      <ul>
+        <li><strong>Segmentation:</strong> 중소형 호텔, 리조트 등</li>
+        <li><strong>Targeting:</strong> 데이터 활용 의지가 있는 중소형 호텔</li>
+        <li><strong>Positioning:</strong> 데이터 기반 수익 혁신 파트너</li>
+      </ul>
+    </section>
+
+    <section class="features">
+      <h2>기능 정의</h2>
+      <ul class="feature-list">
+        <li>📡 외부 정보 종합</li>
+        <li>💰 경쟁사 가격 비교</li>
+        <li>📊 채널별 비교</li>
+        <li>🏨 객실타입별 비교</li>
+        <li>📤 Export 기능</li>
+        <li>🔍 경쟁사 지정</li>
+      </ul>
+    </section>
+
+    <!-- 글 리스트 -->
+    <footer class="post-footer">
+      <h3>다른 글 보기</h3>
+      <ul class="post-list">
+        <li><a href="service-detail.html">🔹 데이터메니티 서비스 상세</a></li>
+        <li><a href="#">🔹 헬퍼잇 기획 개요</a></li>
+        <li><a href="#">🔹 메디히어로 서비스 전략</a></li>
+      </ul>
+    </footer>
+  </main>
+</body>
+
+</html>

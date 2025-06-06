@@ -1494,3 +1494,90 @@ body.dark-mode .skill-icon {
 .scroll-top:hover {
   background-color: #2e5bd6;
 }
+
+
+
+
+
+/*--------------service-detail.html 전용 스타일----------------*/
+
+
+
+
+ body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      color: #222;
+    }
+
+    .blog-container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      background: #fff;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      color: #111;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.8rem;
+      color: #444;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.4rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .highlight-box {
+      background: #f1f5ff;
+      padding: 1rem 1.5rem;
+      border-left: 6px solid #4f81f7;
+      border-radius: 6px;
+      margin: 2rem 0;
+    }
+
+    .highlight-box.warning {
+      background: #fff4f0;
+      border-left-color: #f47c57;
+    }
+
+    .summary {
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 2rem;
+    }
