@@ -744,7 +744,7 @@ body.dark-mode .skill-icon {
 
 .project-section {
   padding: 60px 300px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .project-section .section-sub {
@@ -755,7 +755,7 @@ body.dark-mode .skill-icon {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px; 
+  gap: 80px;
   padding: 0;
   margin-bottom: 120px;
 }
@@ -888,7 +888,8 @@ body.dark-mode .skill-icon {
   overflow: hidden;
   /* ✅ 내부 버튼/인디케이터 밖으로 튀는 것 방지 */
   margin-bottom: 20px;
-  background-color: transparent; /* ✅ 배경색 제거 */
+  background-color: transparent;
+  /* ✅ 배경색 제거 */
 }
 
 .slider img {
@@ -1501,83 +1502,160 @@ body.dark-mode .skill-icon {
 
 /*--------------service-detail.html 전용 스타일----------------*/
 
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.8;
+}
+
+.top-header {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  z-index: 10;
+}
+
+.home-button {
+  text-decoration: none;
+  padding: 8px 14px;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.hero-banner {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* 어두운 필터 */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
 
 
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
 
- body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      line-height: 1.7;
-      color: #222;
-    }
+.hero-content .subtitle {
+  font-size: 18px;
+  opacity: 0.85;
+}
 
-    .blog-container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      background: #fff;
-    }
+.service-detail {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
 
-    .title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5em;
-    }
+.service-detail h2 {
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #111;
+}
 
-    .meta {
-      font-size: 0.95rem;
-      color: #777;
-      margin-bottom: 2rem;
-    }
+.service-detail h3 {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #333;
+}
 
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 2.5rem;
-      color: #111;
-    }
+.summary {
+  font-size: 16px;
+  font-weight: 400;
+  background: #f8f8f8;
+  padding: 16px;
+  border-left: 4px solid #007bff;
+  margin-bottom: 40px;
+}
 
-    h3 {
-      font-size: 1.2rem;
-      margin-top: 1.8rem;
-      color: #444;
-    }
+.project-meta ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 15px;
+  margin: 0;
+}
 
-    p {
-      margin: 1rem 0;
-    }
+.project-meta li {
+  margin-bottom: 10px;
+}
 
-    ul {
-      margin: 1rem 0;
-      padding-left: 1.4rem;
-    }
+.aside-box {
+  background: #f0f4ff;
+  border-left: 4px solid #007bff;
+  padding: 14px;
+  margin: 20px 0;
+  font-size: 15px;
+}
 
-    ul li {
-      margin-bottom: 0.5rem;
-    }
+.aside-box.warning {
+  background: #fff3f3;
+  border-left-color: #f44336;
+}
 
-    img {
-      max-width: 100%;
-      margin: 2rem 0;
-      border-radius: 8px;
-    }
+.service-detail img {
+  max-width: 100%;
+  margin: 20px 0;
+  border-radius: 6px;
+}
 
-    .highlight-box {
-      background: #f1f5ff;
-      padding: 1rem 1.5rem;
-      border-left: 6px solid #4f81f7;
-      border-radius: 6px;
-      margin: 2rem 0;
-    }
+.solution-list,
+.feature-list,
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
 
-    .highlight-box.warning {
-      background: #fff4f0;
-      border-left-color: #f47c57;
-    }
+.solution-list li,
+.feature-list li,
+.post-list li {
+  margin-bottom: 10px;
+}
 
-    .summary {
-      font-size: 1.05rem;
-      color: #333;
-      margin-bottom: 2rem;
-    }
+.post-footer {
+  margin-top: 100px;
+  border-top: 1px solid #ddd;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.post-footer h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.post-footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.post-footer a:hover {
+  text-decoration: underline;
+}

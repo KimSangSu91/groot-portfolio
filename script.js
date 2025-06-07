@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,           // 반복
     showCursor: true      // 커서 보이게
   });
-  
+
 
   // 카드 애니메이션
   const cards = document.querySelectorAll('.card');
@@ -69,45 +69,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-// ✅ 프로젝트 슬라이더 (슬라이드 + 인디케이터 동기화)
-document.querySelectorAll(".slider").forEach((slider) => {
-  const slides = slider.querySelectorAll(".slide");
-  const prevBtn = slider.querySelector(".prev");
-  const nextBtn = slider.querySelector(".next");
-  const dots = slider.querySelectorAll(".slider-controls .dot");
+  // ✅ 프로젝트 슬라이더 (슬라이드 + 인디케이터 동기화)
+  document.querySelectorAll(".slider").forEach((slider) => {
+    const slides = slider.querySelectorAll(".slide");
+    const prevBtn = slider.querySelector(".prev");
+    const nextBtn = slider.querySelector(".next");
+    const dots = slider.querySelectorAll(".slider-controls .dot");
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  const showSlide = (index) => {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+
+      currentIndex = index;
+    };
+
+    prevBtn?.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
     });
 
     dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
+      dot.addEventListener("click", () => {
+        showSlide(i);
+      });
     });
 
-    currentIndex = index;
-  };
-
-  prevBtn?.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     showSlide(currentIndex);
   });
-
-  nextBtn?.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      showSlide(i);
-    });
-  });
-
-  showSlide(currentIndex);
-});
 
   // ✅ 프로젝트 참여율 애니메이션
   const projectSection = document.querySelector("#projects");
@@ -288,6 +288,7 @@ document.querySelectorAll(".slider").forEach((slider) => {
         header.classList.remove("scrolled");
       }
     });
+
 
     // 이 위에 추가
   }
