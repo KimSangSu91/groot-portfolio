@@ -437,8 +437,7 @@ body.dark-mode .skill-icon {
 }
 
 .text {
-  padding-left: 450px;
-  padding-top: 40px;
+  padding: 40px 0 40px 450px; 
 }
 
 .text p {
@@ -960,6 +959,8 @@ body.dark-mode .skill-icon {
 
 /* 슬라이더 안쪽 버튼 (서비스 기획 상세) */
 .slider-controls .detail-link {
+  /* 상세 페이지 작업시 디스플레이 항목 제거 */
+  display: none;
   background: #007bff;
   color: white;
   padding: 10px 20px;
@@ -1546,7 +1547,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* 어두운 필터 */
+  background: rgba(0, 0, 0, 0.4);
+  /* 어두운 필터 */
   z-index: 0;
 }
 
