@@ -396,6 +396,24 @@ body.dark-mode .skill-icon {
   }
 }
 
+.career-button {
+  position: fixed;
+  bottom: 40px;    /* 아래에서 40px */
+  left: 40px;      /* 왼쪽에서 40px */
+  padding: 8px 18px;
+  background-color: #4f81f7;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  text-decoration: none;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.career-button:hover {
+  background-color: #3a6cd6;
+}
+
 /* Who am I */
 .who {
   position: relative;
