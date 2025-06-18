@@ -289,6 +289,36 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // ✅ 목차 활성화 표시
+    const sectionEls = document.querySelectorAll("main section[id]");
+    const tocLinks = document.querySelectorAll(".toc a");
+
+    const tocObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("보이는 섹션:", entry.target.id); // ✅ 이 줄만 추가
+            tocLinks.forEach((link) => {
+              link.classList.remove("active");
+              const targetId = entry.target.getAttribute("id");
+              if (link.getAttribute("href") === `#${targetId}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      },
+      {
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: 0.2,
+      }
+    );
+
+    sectionEls.forEach((section) => {
+      tocObserver.observe(section);
+    });
+
+
 
     // 이 위에 추가
   }
