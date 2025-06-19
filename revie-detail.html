@@ -2,325 +2,328 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>서비스 상세 - 리비</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>서비스 상세 - 리비</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- 홈 버튼 -->
-  <header class="top-header">
-    <a href="index.html" class="home-button">뒤로가기</a>
-  </header>
+    <!-- 홈 버튼 -->
+    <header class="top-header">
+        <a href="index.html" class="home-button">뒤로가기</a>
+    </header>
 
-  <!-- 헤더 배경 이미지와 제목 영역 -->
-  <section class="hero-banner" style="background-image: url('images/revie-image2.png');">
-    <div class="hero-content">
-      <h1>숙박시설 리뷰관리&분석 서비스 리비(REIVE)</h1>
-      <p class="subtitle">2022.6 - 2025.6</p>
-    </div>
-  </section>
-
-  <main class="service-detail-layout">
-    <!-- 왼쪽 고정 목차 -->
-    <aside class="toc">
-      <ul>
-        <h3>INDEX</h3>
-        <li><a href="#overview">Ⅰ. 기획 개요</a></li>
-        <li><a href="#intention">Ⅱ. 기획 의도</a></li>
-        <li><a href="#persona">Ⅲ. 고객 페르소나</a></li>
-        <li><a href="#problem-solution">Ⅳ. 문제 정의&해결책</a></li>
-        <li><a href="#market">Ⅴ. 마켓 분석</a></li>
-        <li><a href="#IA">Ⅵ. IA 및 와이어프레임 설계</a></li>
-        <li><a href="#features">Ⅶ. 핵심 기능</a></li>
-        <li><a href="#differentiation">Ⅷ. 서비스 강점&차별점</a></li>
-      </ul>
-    </aside>
-    <div class="service-detail-content">
-      <section id="overview" class="overview">
-        <div class="summary">
-          <h2>Overview</h2>
-          호텔 수익관리 시스템 ‘데이터메니티’는 호텔뿐만 아니라 다양한 숙박시설의 온라인 판매채널(OTA)에
-          <br>상품을 등록하는 경우 <strong>최적의 판매 가격을 설정할 수 있도록 돕는 가격 관리&모니터링 시스템</strong>입니다.
-          <br>호텔에 판매 가격을 설정할 때 참고하는 주요 지표인 경쟁 시설의 가격 정보, 주변 주요 행사 정보, 날씨 정보를
-          <br>실시간으로 제공하여 호텔이 현재 판매하고 있는 가격이 적정한지 모니터링 하는 기능을 제공합니다.
-          <br>
-          <br><strong>2020년 서비스 출시 시점에 회사가 설립되어 첫번째 프로젝트로 진행하였고, 2025년 6월 현재까지 서비스 중 입니다.
-            <br>PM으로써 데이터메니티 초기 비즈니스 모델 수립 및 서비스 기획, 정책, 디자인 등을 담당하여 진행하였습니다.</strong>
+    <!-- 헤더 배경 이미지와 제목 영역 -->
+    <section class="hero-banner" style="background-image: url('images/revie-image2.png');">
+        <div class="hero-content">
+            <h1>숙박시설 리뷰관리&분석 서비스 리비(REIVE)</h1>
+            <p class="subtitle">2022.6 - 2025.6</p>
         </div>
+    </section>
 
-        <div class="project-meta">
-          <h2>Ⅰ. 기획 개요</h2>
-          <ul>
-            <li><strong>프로젝트명:</strong> 숙박시설 수익관리시스템(RMS) 데이터메니티</li>
-            <li><strong>기간:</strong> 2020.12 ~ 2025.6</li>
-            <li><strong>역할:</strong> PM</li>
-            <li><strong>요약:</strong> 야놀자, 여기어때, 부킹닷컴 등 다양한 판매채널(OTA)에 상품을 등록하고 관리해야 하는
-              숙박시설이 가격을 조정하는 업무를 진행하기 위하여 수요에 영향을 주는 축제, 행사, 날씨 정보와
-              경쟁사 가격을 매일 서치하는 불편을 해소</li>
-          </ul>
+    <main class="service-detail-layout">
+        <!-- 왼쪽 고정 목차 -->
+        <aside class="toc">
+            <ul>
+                <h3>INDEX</h3>
+                <li><a href="#overview">Ⅰ. 기획 개요</a></li>
+                <li><a href="#intention">Ⅱ. 기획 의도</a></li>
+                <li><a href="#persona">Ⅲ. 고객 페르소나</a></li>
+                <li><a href="#problem-solution">Ⅳ. 문제 정의&해결책</a></li>
+                <li><a href="#market">Ⅴ. 마켓 분석</a></li>
+                <li><a href="#IA">Ⅵ. IA 및 와이어프레임 설계</a></li>
+                <li><a href="#features">Ⅶ. 핵심 기능</a></li>
+                <li><a href="#differentiation">Ⅷ. 서비스 강점&차별점</a></li>
+            </ul>
+        </aside>
+        <div class="service-detail-content">
+            <section id="overview" class="overview">
+                <div class="summary">
+                    <h2>Overview</h2>
+                    리뷰 자동응답 서비스 ‘리비(Revie)’는 숙박시설 전용 리뷰 관리&분석 솔수션으로, 다양한 OTA(야놀자, 여기어때, 부킹닷컴 등)
+                    <br>에 등록된 리뷰를<strong>크롤링하고, AI 기반으로 분석하여, 자동으로 맞춤 응답을 생성하는 SaaS형 솔루션</strong>입니다.
+                    <br>단순히 리뷰에 답글을 다는 것을 넘어, 긍정/부정 감정 분석 및 리뷰 키워드 추출, 응답률 리포트 등
+                    <br><strong>호텔 등 숙박시설의 고객 경험 관리를 자동화</strong>하는 기능을 포함하고 있습니다.
+                    <br>
+                    <br><strong>2022년 내부 R&D 프로젝트로 시작하여, 2023년 SaaS 형태로 상용화되었으며,
+                        <br>2025년 현재까지 다수의 브랜드 호텔 및 중소형 호텔에 서비스를 제공 중입니다.
+                        <br>해당 프로젝트에서 총괄 PM이자 기획자로써 리비의 서비스 전략 수립, 기능 정의, UX 설계 및 정책 기획을 주도하였습니다.</strong>
+                </div>
+                <div class="project-meta">
+                    <h2>Ⅰ. 기획 개요</h2>
+                    <ul>
+                        <li><strong>프로젝트명:</strong> 숙박시설 리뷰 관리&분석 서비스 리비</li>
+                        <li><strong>기간:</strong> 2022.6 ~ 2025.6</li>
+                        <li><strong>역할:</strong> PM</li>
+                        <li><strong>요약:</strong> OTA 기반 리뷰 수집, 감정 분석, AI 자동 응답 기능을 포함한 SaaS 서비스로,
+                            <br>호텔의 리뷰 응답 업무를 자동화하고, 시장 비교와 고객 피드백 분석 기능을 통해 브랜드 이미지 제고와 운영 효율성을 향상시킴
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="intention" class="intention">
+                <h2>Ⅱ. 기획 의도</h2>
+                <h3>서비스의 시작</h3>
+                <p>데이터메니티 서비스는 코로나 19로 인해 여행업계가 상당한 피해를 입은 시점에 기획되었습니다.
+                    <br>새로운 비즈니스를 창출하기 위하여 타겟을 고민하던 중,
+
+                    <strong><u>앞으로 코로나와 같은 일들이 언제든지 일어날 수 있다고 가정하고,
+                            <br>이런 상황에서 많은 피해가 예상되는 산업의 문제를 해결할 솔루션을 제안한다면 비즈니스로 연결될 수 있을 것</u></strong>
+                    이라는 <br>아이디어를 가지고 여행-관광 산업을 분석하기 시작했습니다.<br>
+
+                    산업에 대한 분석을 진행하며 자연스럽게 숙박산업에 대해 접하게 되었고, 산업의 문제점을 발견할 수 있었습니다.
+
+                <h3>문제점 발견</h3>
+                <p>숙박산업의 문제점을 발견하기위해 호텔 지배인, 실무자, 경영자 등 다양한 관계자와의 인터뷰를 통해
+                    <br>숙박산업의 문제에 대하여 확인할 수 있었습니다. 우리가 확인한 숙박산업의 문제는 다음과 같았습니다.
+                </p>
+                <img src="images/problem.png" alt="문제" class="responsive-img">
+
+                <div class="aside-box warning">
+                    ⚠️ 숙박산업의 문제점:
+                    <ul>
+                        <li><strong>문제점1. OTA(Online Travel Agency)의 영향력 확장</strong>
+                            <p>워크 인(Walk-in)고객이나 전화를 통해 숙박 예약이 이루어지던 과거와 달리 야놀자, 여기어때, 부킹닷컴 등의
+                                <br>OTA(Online Travel Agency)의 영향력이 확장되며, 숙박시설의 가격을 누구나 실시간으로 확인할 수 있게 되었으며,
+                                <br>그로 인해 여러 채널에 등록된 상품의 가격을 적정 가로 조절 및 관리하는 업무가 주요해 짐.
+                            </p>
+                        </li>
+                        <li><strong>문제점2. 중소형 시설의 전문 인력 부재</strong>
+                            <p>힐튼, IHG, 메리어트 그룹 등 글로벌 체인 호텔의 경우 적정 판매가격을 조정하여 수익을 향상시키는
+                                <br>수익 관리자(Revenue Manager)가 존재 하지만, 대다수 중소규모 숙박시설의 경우 별도 인력을 배정하는 것이 어려운 상황.
+                                <br>특히 2020년 코로나19의 팬데믹으로 숙박산업 종사자의 약 40%가 떠나면서 현재까지도 인력 문제를 겪고 있음.
+                            </p>
+                        </li>
+                        <li><strong>문제점3. 맞춤 솔루션 부재로 경쟁력 격차 발생</strong>
+                            <p>이러한 상황에서 숙박시설의 수익관리를 위한 전용 솔루션 또한 부재한 상황이며, 자체 솔루션 사용이 가능한
+                                <br>글로벌 체인 숙박시설과 중소형 숙박시설 간의 경쟁력 격차가 심화되는 상황.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <p>우리는 발견된 숙박산업의 문제를 해결하고 새로운 비즈니스 모델을 만들기 위하여 더욱 명확한 문제 정의를 위해
+                    <br>고객 페르소나와 여정을 정리해 보았습니다.
+                </p>
+            </section>
+
+            <section id="persona" class="persona">
+                <h2>Ⅲ. 고객 페르소나</h2>
+                <p>우리는 시장조사를 바탕으로 서비스 1차 타겟으로 <strong>①인력난이 존재하며, ②자체 솔루션 구축도 불가능</strong>한
+                    <br>50~200객실 규모의 중소형 호텔로 설정하고, 실제 해당 규모의 호텔을 운영 중인 실무자 및 대표자를 중심으로 인터뷰를 진행하였습니다.
+                    <br>우리는 명확한 서비스 대상이 존재하기 때문에 가상의 페르소나가 아닌 실존하는 캐릭터로 고객 여정을 정리할 수 있었습니다.
+                </p><br>
+                <h3>1️⃣ 솔루션 부재로 인한 업무 불가</h3>
+                <p>가격 관리를 위해 필요한 데이터 수집, 분석, 적용 작업에는
+                    <br><strong>상당한 시간이 소요되며, 전용 솔루션 없이는 원활한 업무가 불가능</strong>한 상황
+                </p>
+                <img src="images/persona1.png" alt="페르소나와 고객 여정" class="responsive-img">
+
+                <h3>2️⃣ 인력의 한계로 인한 업무 불가</h3>
+                <p>1~2인으로 운영되는 중소시설 특성 상 프론트데스크 업무부터 마케팅, 세일즈까지 담당하고 있어
+                    <br><strong>가격관리를 위한 전용 솔루션 없이는 업무 시간의 한계</strong>가 존재
+                </p>
+                <img src="images/persona2.png" alt="페르소나와 고객 여정" class="responsive-img">
+            </section>
+
+            <section id="problem-solution" class="problem-solution">
+                <h2>Ⅳ. 문제 정의&해결책</h2>
+                <h3>파악된 문제 정리</h3>
+                <p>우리는 페르소나 및 고객 여정 정리를 통해 구체적인 문제점을 도출하고 해결 방안을 정리할 수 있었습니다.
+                    <br><strong>구체적으로 정의된 문제점과 해결책은 다음과 같습니다.</strong>
+                </p>
+                <img src="images/problem-solution.png" alt="문제와 해결책" class="responsive-img">
+
+                <h3>구체적인 솔루션 방향 정의</h3>
+                <p>다음으로는 이 솔루션을 어떤 방향으로 기획해 나가야 하는지 좀 더 구체적인 요구사항을 파악하였습니다.
+                <div class="aside-box warning">
+                    ⚠️ 상세 요구 사항
+                    <ul>
+                        <li><strong>축제·행사 등 수요 관련 데이터 및 주변 경쟁 시설 가격 데이터 수집 시스템 </strong>
+                            <p>워크 인(Walk-in)고객이나 전화를 통해 숙박 예약이 이루어지던 과거와 달리 야놀자, 여기어때, 부킹닷컴 등의
+                                <br>호텔(숙박시설)은 <strong>①내부 판매량 ②축제, 행사 등 수요에 대한 외부 변수, ③주변 경쟁시설의 가격변동</strong>
+                                <br> 3개의 주요 변수에 의해 가격이 변동되며, 이를 실시간으로 반영해야 효율적인 세일즈가 가능,
+                                <br> 내부 판매량은 이미 대부분 호텔에서 사용 중인 전산 시스템(PMS)를 통해 간편하게 확인이 가능하나,
+                                <br>축제·행사 등 외부 변수나 주변 경쟁 시설 가격 정보의 경우, 인터넷에서 직접 수집해야 하는 정보로,
+                                <br>많은 시간과 인력 투입이 불가피
+                            </p>
+                        </li>
+                        <li><strong>판매량, 시장 수요, 경쟁 시설 가격을 종합한 가격 추천 시스템</strong>
+                            <p>수집된 데이터를 분석하여 최적의 가격을 도출해 내야 하지만, 데이터 분석 경험이 적은 호텔의 경우,
+                                <br>정량적인 데이터 분석이 불가능하여, 관리자(지배인)의 개인적 경험에 의존할 수 밖에 없음
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <p>다음으로는 구체적인 설계를 위하여 유사 서비스 및 시장을 조사하였습니다.
+            </section>
+
+            <section id="market" class="market">
+                <h2>Ⅴ. 마켓 분석</h2>
+                <h3>시장 분석</h3>
+                <p>시장 조사 결과 2020년부터 24년까지 글로벌 OTA시장은 13.6%성장 하였으며, 지속적인 성장이 예상되었습니다.
+                    <br>그 결과 전 세계적으로 OTA의 적정 가격을 설정하여 수익을 극대화 하는
+                    <br><strong>'수익관리 시스템(Revenue Management System, RMS)'</strong> 시장 또한 급속도로 성장하고 있음을 확인하였습니다.
+                    <br>Market Size 조사 결과, <strong>국내에는 약 2,000개의 호텔을 포함한 55,000개의 숙박시설이 존재</strong>하고 있으며, 시설 규모로 계산한
+                    결과
+                    <br>약 3,000억에서 <strong>최대 8천억원 규모</strong>의 시장으로 추정되며, 아시아 시장은 2~3조원, 글로벌 시장은 14조에서 42조 규모로 계산되었습니다.
+                </p>
+                <img src="images/market.png" alt="시장분석" class="responsive-img" style="max-width: 100%;">
+                <br>
+                <h3>경쟁사 분석</h3>
+                <p>시장 내 경쟁사에 대해 확인한 결과, 국내 시장에 비해 상대적으로 관광&숙박 산업이 발전한 유럽과 미국을 중심으로
+                    <br>다양한 솔루션이 존재함을 확인할 수 있었습니다.
+                    <br>특히 미국 중심으로 서비스를 제공하는 'Rategain', 'IDEAS', 유럽을 중심으로 서비스를 제공하는 'OTAinsight'의 경우
+                    <br>IPO및 1천억 이상의 투자유치 경험을 보유한 유니콘 기업으로 성장해 있음을 확인할 수 있었습니다.
+                    <br>다만 <strong>현재까지 아시아 시장에 적극적으로 진출한 기업은 없는 것</strong>으로 확인하였으며,
+                    <br>국내 호텔 확인 결과 총 2,000여개의 호텔 중 30개 미만의 호텔만이 RMS를 활용하고 있다고 파악하였습니다.
+                </p>
+                <img src="images/competition.png" alt="경쟁사 분석" class="responsive-img" style="max-width: 100%;">
+
+                <p>경쟁사에서 제공하는 서비스를 상세 분석한 결과 대부분의 기능과 UI요소가 중복됨을 확인할 수 있었고, 기능을 정리하였습니다.
+                </p>
+                <table class="my-table">
+                    <thead>
+                        <tr>
+                            <th>항목</th>
+                            <th>Rategain</th>
+                            <th>IDEAS</th>
+                            <th>OTA Insight</th>
+                            <th>Roomprice Genie</th>
+                            <th>RMS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>경쟁사 가격수집</td>
+                            <td>●</td>
+                            <td>●</td>
+                            <td>●</td>
+                            <td>●</td>
+                            <td>●</td>
+                        </tr>
+                        <tr>
+                            <td>축제 행사 데이터 제공</td>
+                            <td>X</td>
+                            <td>X</td>
+                            <td>●</td>
+                            <td>X</td>
+                            <td>●</td>
+                        </tr>
+                        <tr>
+                            <td>AI 가격 설정</td>
+                            <td>●</td>
+                            <td>●</td>
+                            <td>X</td>
+                            <td>●</td>
+                            <td>X</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>경쟁사 서비스 분석 결과 <strong>3개 핵심 기능을 모두 제공하고 있는 솔루션은 아직 존재하지 않음</strong>을 확인할 수 있었으며,
+                    <br>3가지 핵심 기능을 구현함과 동시에 <strong>국내 현황에 맞는 현지화 전략을 통해 차별화</strong> 할 수 있을 것으로 기대되었습니다.
+                    <img src="images/domesticmarket.png" alt="국내시장" class="responsive-img">
+                    <br>특히 국내 시장의 경우 글로벌 마켓과 달리 Agoda, Booking.com, AirBnB 등 글로벌 OTA의 점유율이 상대적으로 낮아
+                    <br><strong>Local OTA인 '야놀자', '여기어때' 데이터를 적극활용한다면 차별화 포인트가 있다고 판단하였습니다.</strong>
+                </p>
+            </section>
+
+            <section id="IA" class="IA">
+                <h2>Ⅵ. IA 및 와이어프레임 설계</h2>
+                <h3>IA 설계</h3>
+                <p> IA 설계 과정에서 가장 중점을 둔 포인트는 <strong>'사용자 중심의 기능 구성'</strong>입니다.
+                    <br>RMS 시스템은 복잡한 데이터를 다루는 서비스이기에, 정보가 어떻게 배치되고 연결되는지에 따라<br>
+                    사용자의 이해도와 행동 유도에 큰 차이를 만들 수 있습니다.
+                    <br><br> 데이터메니티는 '데이터 수집 → 분석 → 가격 적용'이라는 흐름을 갖고 있는 서비스로,
+                    <br>이러한 업무 프로세스가 UI 흐름에도 그대로 반영되어야 했습니다. IA 설계 시 다음 세 가지 원칙을 기반으로 구조를 구성했습니다
+                </p>
+                <img src="images/ia.png" alt="데이터메니티 ia" class="responsive-img">
+                <br>
+                <h3>Wireframe 설계</h3>
+                <p> 와이어프레임 단계에서는 <strong>서비스 이용 흐름과 구체적인 사용방법 가이드 작성</strong>에 집중하였습니다.
+                    <br>특히 RMS는 다양한 데이터를 동시에 보여줘야 하는 서비스로 정보의 계층화와 시각적 우선순위를 구체적으로 작성하였고,
+                    <br>숙박산업에 도메인 지식이 없는 개발자와 협업하기 위하여 기능과 관련된 배경설명과 기능의 의미를 설명하고자 노력하였습니다.
+                    <br>또한 팀원 중 디자이너가 없었던 초기였기 때문에, 전반적은 UI 구성과 컬러 등 디자인적 요소도 고려하여 제작하였습니다.
+                </p>
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/wireframe.png" alt="데이터메니티 초기 와이어프레임" class="responsive-img">
+                    <p style="color: #888; font-size: 14px; margin-top: 8px;">
+                        초기 데이터메니티 와이프레임 일부자료
+                    </p>
+                </div>
+
+
+                <section id="features" class="features">
+                    <h2>Ⅶ. 핵심 기능</h2>
+                    <h3>1️⃣ 경쟁사 가격 수집 및 수집데이터 제공(시각화)</h3>
+                    <p>먼저, 경쟁사 가격을 수집하고 채널별로 경쟁사와 최저가를 쉽게 비교할 수 있도록 시각화하는 기능을 구현하였습니다.
+                        <br>고객 호텔과 고객 호텔이 지정한 경쟁사 데이터를 시간단위로 수집하여 데이터를 제공하였고, 국내 시장 특성을 반영하여
+                        <br>'야놀자', '여기어때' 등 로컬 채널을 포함하였습니다.
+                        <br>UI구성은 기존 글로벌 서비스가 제공하는 <strong>'월간 View'방식의 UI가 아닌 '일간 View'방식의 UI를 Default로
+                            제공</strong>하였는데,
+                        <br>상대적으로 Leadtime(*투숙객이 호텔을 예약하고 실제 이용하기까지의 term)이 짧은 국내 중소형시설 특성 상
+                        <br><strong>월단위 가격보다는 일간-주간 데이터를 상세하게 보는 기능이 필요</strong>했기 때문입니다.
+                        <br>물론 데이터메니티 서비스에서도 월간 View를 제공하여 편의성을 높였습니다.
+                    </p>
+                    <img src="images/price.png" alt="price페이지 비교" class="responsive-img">
+                    <p>이 밖에도 경쟁사 가격을 쉽게 제공하기위해 다음과같은 기능을 추가로 구현하여 제공하였습니다.
+                    </p>
+                    <ul class="feature-list">
+                        <li>🔍 <strong>경쟁사 지정</strong> : 고객사가 원하는 경쟁사를 자유롭게 검색하여 추가할 수 있는 기능</li>
+                        <li>🔍 <strong>수집 채널 지정</strong> : 고객사가 원하는 채널을 자유롭게 추가하여 확인할 수 있는 기능</li>
+                        <li>🔍 <strong>룸 타입 구분</strong> : 유사 등급의 객실간 비교를 할 수 있도록 룸타입을 분류하여 제공하는 기능</li>
+                    </ul>
+                    <br>
+
+                    <h3>2️⃣ 행사·축제 데이터 수집</h3>
+                    <p>호텔 가격에 영향을 미치는 행사나 축제는 그 규모도 중요하지만 개최지와의 거리 등의 다양한 변수가 존재합니다.
+                        <br>데이터메니티 서비스에서는 사용자가 위치한 지역내에서 개최되는 <strong>축제정보를 관광공사에서 제공하는 API를 활용하여 제공</strong>하였으며,
+                        <br>컨벤션 센터 데이터를 추가로 수집하여 다양한 학회, 컨벤션 등의 정보를 <strong>고객사 호텔이 위치한 반경 20km내 데이터를 제공하였습니다.</strong>
+                        <br>수집된 정보는 월간 view 페이지와 메인 페이지에서 확인할 수 있도록 제공하였습니다.
+                    </p>
+                    <img src="images/festival.png" alt="축제 정보 제공" class="responsive-img">
+                    <p>이 밖에도 시장 수요를 예측할 수 있는 다양한 데이터를 제공하였습니다.
+                    </p>
+                    <ul class="feature-list">
+                        <li>🔍 <strong>날씨 정보</strong> : 고객사가 위치한 지역의 기상 정보를 제공</li>
+                        <li>🔍 <strong>판매량 예측</strong> : OTA 판매량 예측 데이터</li>
+                    </ul>
+                    <br>
+
+                    <h3>3️⃣ AI 가격 설정 기능</h3>
+                    <p>마지막 핵심 기능인 AI 가격 설정은 수집된 데이터를 기반으로<strong>최적의 가격을 도출</strong>하는 작업이 선행되어야 했습니다.
+                        <br>팀 내 개발자, 데이터 분석가와 함께 예측모델(MAPE)을 결정하고, 모델에 사용할 수 있는
+                        <br>'판매량', '판매 가격', '경쟁시설 가격', '날씨', '시설정보', '공휴일 등 날짜 정보', '객실 상세정보'등 데이터를 특정하고,
+                        <br> 판매 가격 설정 모델에 학습한 결과 <strong>정확도 98.12%에 도달</strong>하였습니다.
+                    </p>
+                    <img src="images/aimodel.png" alt="AI모델정확도" class="responsive-img">
+                    <p>이후 도출된 적정 가격을 쉽게 사용자가 적용할 수 있도록 기간별, 시간별로 자동 가격 설정을 가능하도록 구현하였으며,
+                        <br>객실 타입별로도 가격을 결정할 수 있도록 '그룹'기능을 구현하였습니다.
+                    </p>
+                    <img src="images/pricecontrol.png" alt="가격설정기능" class="responsive-img">
+                </section>
+
+
+                <section id="differentiation" class="differentiation">
+                    <h2>Ⅷ. 서비스 강점&차별점</h2>
+                    <h3>현지화 전략을 통한 국내 시장 점유율 확보</h3>
+                    <p>앞서의 글로벌 RMS는 ‘아고다’, ‘부킹닷컴’ 등 Global OTA 중심으로 서비스를 제공중인 상황에서
+                        <br>국내 및 아시아 시장의 ‘야놀자’, ‘여기어때', ‘라쿠텐’ 등 Local OTA데이터를 추가함으로써,
+                        <br>Local OTA의 점유율이 큰 국내, 일본시장에서 경쟁 우위를 확보 할 수 있었습니다.
+                        <br>또한 글로벌 이벤트만 제공하는 글로벌 서비스와의 차별점을 위하여 기상,
+                        <br>행사&축제 정보 역시 로컬 데이터를 수집 및 제공하여 차별화 했습니다.
+                    </p>
+                    <img src="images/competitionpoint.png" alt="경쟁력" class="responsive-img">
+
+
+                    <footer class="footer">
+                        <p>© 2025 Kim Sang-Su. All rights reserved.</p>
+                        <p>Designed & Coded by <a href="https://github.com/kimsangsu91" target="_blank">Kim Sang-Su</a>
+                        </p>
+                    </footer>
         </div>
-      </section>
-
-      <section id="intention" class="intention">
-        <h2>Ⅱ. 기획 의도</h2>
-        <h3>서비스의 시작</h3>
-        <p>데이터메니티 서비스는 코로나 19로 인해 여행업계가 상당한 피해를 입은 시점에 기획되었습니다.
-          <br>새로운 비즈니스를 창출하기 위하여 타겟을 고민하던 중,
-
-          <strong><u>앞으로 코로나와 같은 일들이 언제든지 일어날 수 있다고 가정하고,
-              <br>이런 상황에서 많은 피해가 예상되는 산업의 문제를 해결할 솔루션을 제안한다면 비즈니스로 연결될 수 있을 것</u></strong>
-          이라는 <br>아이디어를 가지고 여행-관광 산업을 분석하기 시작했습니다.<br>
-
-          산업에 대한 분석을 진행하며 자연스럽게 숙박산업에 대해 접하게 되었고, 산업의 문제점을 발견할 수 있었습니다.
-
-        <h3>문제점 발견</h3>
-        <p>숙박산업의 문제점을 발견하기위해 호텔 지배인, 실무자, 경영자 등 다양한 관계자와의 인터뷰를 통해
-          <br>숙박산업의 문제에 대하여 확인할 수 있었습니다. 우리가 확인한 숙박산업의 문제는 다음과 같았습니다.
-        </p>
-        <img src="images/problem.png" alt="문제" class="responsive-img">
-
-        <div class="aside-box warning">
-          ⚠️ 숙박산업의 문제점:
-          <ul>
-            <li><strong>문제점1. OTA(Online Travel Agency)의 영향력 확장</strong>
-              <p>워크 인(Walk-in)고객이나 전화를 통해 숙박 예약이 이루어지던 과거와 달리 야놀자, 여기어때, 부킹닷컴 등의
-                <br>OTA(Online Travel Agency)의 영향력이 확장되며, 숙박시설의 가격을 누구나 실시간으로 확인할 수 있게 되었으며,
-                <br>그로 인해 여러 채널에 등록된 상품의 가격을 적정 가로 조절 및 관리하는 업무가 주요해 짐.
-              </p>
-            </li>
-            <li><strong>문제점2. 중소형 시설의 전문 인력 부재</strong>
-              <p>힐튼, IHG, 메리어트 그룹 등 글로벌 체인 호텔의 경우 적정 판매가격을 조정하여 수익을 향상시키는
-                <br>수익 관리자(Revenue Manager)가 존재 하지만, 대다수 중소규모 숙박시설의 경우 별도 인력을 배정하는 것이 어려운 상황.
-                <br>특히 2020년 코로나19의 팬데믹으로 숙박산업 종사자의 약 40%가 떠나면서 현재까지도 인력 문제를 겪고 있음.
-              </p>
-            </li>
-            <li><strong>문제점3. 맞춤 솔루션 부재로 경쟁력 격차 발생</strong>
-              <p>이러한 상황에서 숙박시설의 수익관리를 위한 전용 솔루션 또한 부재한 상황이며, 자체 솔루션 사용이 가능한
-                <br>글로벌 체인 숙박시설과 중소형 숙박시설 간의 경쟁력 격차가 심화되는 상황.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <p>우리는 발견된 숙박산업의 문제를 해결하고 새로운 비즈니스 모델을 만들기 위하여 더욱 명확한 문제 정의를 위해
-          <br>고객 페르소나와 여정을 정리해 보았습니다.
-        </p>
-      </section>
-
-      <section id="persona" class="persona">
-        <h2>Ⅲ. 고객 페르소나</h2>
-        <p>우리는 시장조사를 바탕으로 서비스 1차 타겟으로 <strong>①인력난이 존재하며, ②자체 솔루션 구축도 불가능</strong>한
-          <br>50~200객실 규모의 중소형 호텔로 설정하고, 실제 해당 규모의 호텔을 운영 중인 실무자 및 대표자를 중심으로 인터뷰를 진행하였습니다.
-          <br>우리는 명확한 서비스 대상이 존재하기 때문에 가상의 페르소나가 아닌 실존하는 캐릭터로 고객 여정을 정리할 수 있었습니다.
-        </p><br>
-        <h3>1️⃣ 솔루션 부재로 인한 업무 불가</h3>
-        <p>가격 관리를 위해 필요한 데이터 수집, 분석, 적용 작업에는
-          <br><strong>상당한 시간이 소요되며, 전용 솔루션 없이는 원활한 업무가 불가능</strong>한 상황
-        </p>
-        <img src="images/persona1.png" alt="페르소나와 고객 여정" class="responsive-img">
-
-        <h3>2️⃣ 인력의 한계로 인한 업무 불가</h3>
-        <p>1~2인으로 운영되는 중소시설 특성 상 프론트데스크 업무부터 마케팅, 세일즈까지 담당하고 있어
-          <br><strong>가격관리를 위한 전용 솔루션 없이는 업무 시간의 한계</strong>가 존재
-        </p>
-        <img src="images/persona2.png" alt="페르소나와 고객 여정" class="responsive-img">
-      </section>
-
-      <section id="problem-solution" class="problem-solution">
-        <h2>Ⅳ. 문제 정의&해결책</h2>
-        <h3>파악된 문제 정리</h3>
-        <p>우리는 페르소나 및 고객 여정 정리를 통해 구체적인 문제점을 도출하고 해결 방안을 정리할 수 있었습니다.
-          <br><strong>구체적으로 정의된 문제점과 해결책은 다음과 같습니다.</strong>
-        </p>
-        <img src="images/problem-solution.png" alt="문제와 해결책" class="responsive-img">
-
-        <h3>구체적인 솔루션 방향 정의</h3>
-        <p>다음으로는 이 솔루션을 어떤 방향으로 기획해 나가야 하는지 좀 더 구체적인 요구사항을 파악하였습니다.
-        <div class="aside-box warning">
-          ⚠️ 상세 요구 사항
-          <ul>
-            <li><strong>축제·행사 등 수요 관련 데이터 및 주변 경쟁 시설 가격 데이터 수집 시스템 </strong>
-              <p>워크 인(Walk-in)고객이나 전화를 통해 숙박 예약이 이루어지던 과거와 달리 야놀자, 여기어때, 부킹닷컴 등의
-                <br>호텔(숙박시설)은 <strong>①내부 판매량 ②축제, 행사 등 수요에 대한 외부 변수, ③주변 경쟁시설의 가격변동</strong>
-                <br> 3개의 주요 변수에 의해 가격이 변동되며, 이를 실시간으로 반영해야 효율적인 세일즈가 가능,
-                <br> 내부 판매량은 이미 대부분 호텔에서 사용 중인 전산 시스템(PMS)를 통해 간편하게 확인이 가능하나,
-                <br>축제·행사 등 외부 변수나 주변 경쟁 시설 가격 정보의 경우, 인터넷에서 직접 수집해야 하는 정보로,
-                <br>많은 시간과 인력 투입이 불가피
-              </p>
-            </li>
-            <li><strong>판매량, 시장 수요, 경쟁 시설 가격을 종합한 가격 추천 시스템</strong>
-              <p>수집된 데이터를 분석하여 최적의 가격을 도출해 내야 하지만, 데이터 분석 경험이 적은 호텔의 경우,
-                <br>정량적인 데이터 분석이 불가능하여, 관리자(지배인)의 개인적 경험에 의존할 수 밖에 없음
-              </p>
-            </li>
-          </ul>
-        </div>
-        <p>다음으로는 구체적인 설계를 위하여 유사 서비스 및 시장을 조사하였습니다.
-      </section>
-
-      <section id="market" class="market">
-        <h2>Ⅴ. 마켓 분석</h2>
-        <h3>시장 분석</h3>
-        <p>시장 조사 결과 2020년부터 24년까지 글로벌 OTA시장은 13.6%성장 하였으며, 지속적인 성장이 예상되었습니다.
-          <br>그 결과 전 세계적으로 OTA의 적정 가격을 설정하여 수익을 극대화 하는
-          <br><strong>'수익관리 시스템(Revenue Management System, RMS)'</strong> 시장 또한 급속도로 성장하고 있음을 확인하였습니다.
-          <br>Market Size 조사 결과, <strong>국내에는 약 2,000개의 호텔을 포함한 55,000개의 숙박시설이 존재</strong>하고 있으며, 시설 규모로 계산한 결과
-          <br>약 3,000억에서 <strong>최대 8천억원 규모</strong>의 시장으로 추정되며, 아시아 시장은 2~3조원, 글로벌 시장은 14조에서 42조 규모로 계산되었습니다.
-        </p>
-        <img src="images/market.png" alt="시장분석" class="responsive-img" style="max-width: 100%;">
-        <br>
-        <h3>경쟁사 분석</h3>
-        <p>시장 내 경쟁사에 대해 확인한 결과, 국내 시장에 비해 상대적으로 관광&숙박 산업이 발전한 유럽과 미국을 중심으로
-          <br>다양한 솔루션이 존재함을 확인할 수 있었습니다.
-          <br>특히 미국 중심으로 서비스를 제공하는 'Rategain', 'IDEAS', 유럽을 중심으로 서비스를 제공하는 'OTAinsight'의 경우
-          <br>IPO및 1천억 이상의 투자유치 경험을 보유한 유니콘 기업으로 성장해 있음을 확인할 수 있었습니다.
-          <br>다만 <strong>현재까지 아시아 시장에 적극적으로 진출한 기업은 없는 것</strong>으로 확인하였으며,
-          <br>국내 호텔 확인 결과 총 2,000여개의 호텔 중 30개 미만의 호텔만이 RMS를 활용하고 있다고 파악하였습니다.
-        </p>
-        <img src="images/competition.png" alt="경쟁사 분석" class="responsive-img" style="max-width: 100%;">
-
-        <p>경쟁사에서 제공하는 서비스를 상세 분석한 결과 대부분의 기능과 UI요소가 중복됨을 확인할 수 있었고, 기능을 정리하였습니다.
-        </p>
-        <table class="my-table">
-          <thead>
-            <tr>
-              <th>항목</th>
-              <th>Rategain</th>
-              <th>IDEAS</th>
-              <th>OTA Insight</th>
-              <th>Roomprice Genie</th>
-              <th>RMS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>경쟁사 가격수집</td>
-              <td>●</td>
-              <td>●</td>
-              <td>●</td>
-              <td>●</td>
-              <td>●</td>
-            </tr>
-            <tr>
-              <td>축제 행사 데이터 제공</td>
-              <td>X</td>
-              <td>X</td>
-              <td>●</td>
-              <td>X</td>
-              <td>●</td>
-            </tr>
-            <tr>
-              <td>AI 가격 설정</td>
-              <td>●</td>
-              <td>●</td>
-              <td>X</td>
-              <td>●</td>
-              <td>X</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>경쟁사 서비스 분석 결과 <strong>3개 핵심 기능을 모두 제공하고 있는 솔루션은 아직 존재하지 않음</strong>을 확인할 수 있었으며,
-          <br>3가지 핵심 기능을 구현함과 동시에 <strong>국내 현황에 맞는 현지화 전략을 통해 차별화</strong> 할 수 있을 것으로 기대되었습니다.
-          <img src="images/domesticmarket.png" alt="국내시장" class="responsive-img">
-          <br>특히 국내 시장의 경우 글로벌 마켓과 달리 Agoda, Booking.com, AirBnB 등 글로벌 OTA의 점유율이 상대적으로 낮아
-          <br><strong>Local OTA인 '야놀자', '여기어때' 데이터를 적극활용한다면 차별화 포인트가 있다고 판단하였습니다.</strong>
-        </p>
-      </section>
-
-      <section id="IA" class="IA">
-        <h2>Ⅵ. IA 및 와이어프레임 설계</h2>
-        <h3>IA 설계</h3>
-        <p> IA 설계 과정에서 가장 중점을 둔 포인트는 <strong>'사용자 중심의 기능 구성'</strong>입니다.
-          <br>RMS 시스템은 복잡한 데이터를 다루는 서비스이기에, 정보가 어떻게 배치되고 연결되는지에 따라<br>
-          사용자의 이해도와 행동 유도에 큰 차이를 만들 수 있습니다.
-          <br><br> 데이터메니티는 '데이터 수집 → 분석 → 가격 적용'이라는 흐름을 갖고 있는 서비스로,
-          <br>이러한 업무 프로세스가 UI 흐름에도 그대로 반영되어야 했습니다. IA 설계 시 다음 세 가지 원칙을 기반으로 구조를 구성했습니다
-        </p>
-        <img src="images/ia.png" alt="데이터메니티 ia" class="responsive-img">
-        <br>
-        <h3>Wireframe 설계</h3>
-        <p> 와이어프레임 단계에서는 <strong>서비스 이용 흐름과 구체적인 사용방법 가이드 작성</strong>에 집중하였습니다.
-          <br>특히 RMS는 다양한 데이터를 동시에 보여줘야 하는 서비스로 정보의 계층화와 시각적 우선순위를 구체적으로 작성하였고,
-          <br>숙박산업에 도메인 지식이 없는 개발자와 협업하기 위하여 기능과 관련된 배경설명과 기능의 의미를 설명하고자 노력하였습니다.
-          <br>또한 팀원 중 디자이너가 없었던 초기였기 때문에, 전반적은 UI 구성과 컬러 등 디자인적 요소도 고려하여 제작하였습니다.
-        </p>
-        <div style="text-align: center; margin: 30px 0;">
-          <img src="images/wireframe.png" alt="데이터메니티 초기 와이어프레임" class="responsive-img">
-          <p style="color: #888; font-size: 14px; margin-top: 8px;">
-            초기 데이터메니티 와이프레임 일부자료
-          </p>
-        </div>
-
-
-        <section id="features" class="features">
-          <h2>Ⅶ. 핵심 기능</h2>
-          <h3>1️⃣ 경쟁사 가격 수집 및 수집데이터 제공(시각화)</h3>
-          <p>먼저, 경쟁사 가격을 수집하고 채널별로 경쟁사와 최저가를 쉽게 비교할 수 있도록 시각화하는 기능을 구현하였습니다.
-            <br>고객 호텔과 고객 호텔이 지정한 경쟁사 데이터를 시간단위로 수집하여 데이터를 제공하였고, 국내 시장 특성을 반영하여
-            <br>'야놀자', '여기어때' 등 로컬 채널을 포함하였습니다.
-            <br>UI구성은 기존 글로벌 서비스가 제공하는 <strong>'월간 View'방식의 UI가 아닌 '일간 View'방식의 UI를 Default로 제공</strong>하였는데,
-            <br>상대적으로 Leadtime(*투숙객이 호텔을 예약하고 실제 이용하기까지의 term)이 짧은 국내 중소형시설 특성 상
-            <br><strong>월단위 가격보다는 일간-주간 데이터를 상세하게 보는 기능이 필요</strong>했기 때문입니다.
-            <br>물론 데이터메니티 서비스에서도 월간 View를 제공하여 편의성을 높였습니다.
-          </p>
-          <img src="images/price.png" alt="price페이지 비교" class="responsive-img">
-          <p>이 밖에도 경쟁사 가격을 쉽게 제공하기위해 다음과같은 기능을 추가로 구현하여 제공하였습니다.
-          </p>
-          <ul class="feature-list">
-            <li>🔍 <strong>경쟁사 지정</strong> : 고객사가 원하는 경쟁사를 자유롭게 검색하여 추가할 수 있는 기능</li>
-            <li>🔍 <strong>수집 채널 지정</strong> : 고객사가 원하는 채널을 자유롭게 추가하여 확인할 수 있는 기능</li>
-            <li>🔍 <strong>룸 타입 구분</strong> : 유사 등급의 객실간 비교를 할 수 있도록 룸타입을 분류하여 제공하는 기능</li>
-          </ul>
-          <br>
-
-          <h3>2️⃣ 행사·축제 데이터 수집</h3>
-          <p>호텔 가격에 영향을 미치는 행사나 축제는 그 규모도 중요하지만 개최지와의 거리 등의 다양한 변수가 존재합니다.
-            <br>데이터메니티 서비스에서는 사용자가 위치한 지역내에서 개최되는 <strong>축제정보를 관광공사에서 제공하는 API를 활용하여 제공</strong>하였으며,
-            <br>컨벤션 센터 데이터를 추가로 수집하여 다양한 학회, 컨벤션 등의 정보를 <strong>고객사 호텔이 위치한 반경 20km내 데이터를 제공하였습니다.</strong>
-            <br>수집된 정보는 월간 view 페이지와 메인 페이지에서 확인할 수 있도록 제공하였습니다.
-          </p>
-          <img src="images/festival.png" alt="축제 정보 제공" class="responsive-img">
-          <p>이 밖에도 시장 수요를 예측할 수 있는 다양한 데이터를 제공하였습니다.
-          </p>
-          <ul class="feature-list">
-            <li>🔍 <strong>날씨 정보</strong> : 고객사가 위치한 지역의 기상 정보를 제공</li>
-            <li>🔍 <strong>판매량 예측</strong> : OTA 판매량 예측 데이터</li>
-          </ul>
-          <br>
-
-          <h3>3️⃣ AI 가격 설정 기능</h3>
-          <p>마지막 핵심 기능인 AI 가격 설정은 수집된 데이터를 기반으로<strong>최적의 가격을 도출</strong>하는 작업이 선행되어야 했습니다.
-            <br>팀 내 개발자, 데이터 분석가와 함께 예측모델(MAPE)을 결정하고, 모델에 사용할 수 있는
-            <br>'판매량', '판매 가격', '경쟁시설 가격', '날씨', '시설정보', '공휴일 등 날짜 정보', '객실 상세정보'등 데이터를 특정하고,
-            <br> 판매 가격 설정 모델에 학습한 결과 <strong>정확도 98.12%에 도달</strong>하였습니다.
-          </p>
-          <img src="images/aimodel.png" alt="AI모델정확도" class="responsive-img">
-          <p>이후 도출된 적정 가격을 쉽게 사용자가 적용할 수 있도록 기간별, 시간별로 자동 가격 설정을 가능하도록 구현하였으며,
-            <br>객실 타입별로도 가격을 결정할 수 있도록 '그룹'기능을 구현하였습니다.
-          </p>
-          <img src="images/pricecontrol.png" alt="가격설정기능" class="responsive-img">
-        </section>
-
-
-        <section id="differentiation" class="differentiation">
-          <h2>Ⅷ. 서비스 강점&차별점</h2>
-          <h3>현지화 전략을 통한 국내 시장 점유율 확보</h3>
-          <p>앞서의 글로벌 RMS는 ‘아고다’, ‘부킹닷컴’ 등 Global OTA 중심으로 서비스를 제공중인 상황에서
-            <br>국내 및 아시아 시장의 ‘야놀자’, ‘여기어때', ‘라쿠텐’ 등 Local OTA데이터를 추가함으로써,
-            <br>Local OTA의 점유율이 큰 국내, 일본시장에서 경쟁 우위를 확보 할 수 있었습니다.
-            <br>또한 글로벌 이벤트만 제공하는 글로벌 서비스와의 차별점을 위하여 기상,
-            <br>행사&축제 정보 역시 로컬 데이터를 수집 및 제공하여 차별화 했습니다.
-          </p>
-          <img src="images/competitionpoint.png" alt="경쟁력" class="responsive-img">
-
-
-          <footer class="footer">
-            <p>© 2025 Kim Sang-Su. All rights reserved.</p>
-            <p>Designed & Coded by <a href="https://github.com/kimsangsu91" target="_blank">Kim Sang-Su</a></p>
-          </footer>
-    </div>
-  </main>
+    </main>
 </body>
 
 </html>
