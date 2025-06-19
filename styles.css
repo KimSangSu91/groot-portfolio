@@ -980,7 +980,6 @@ body.dark-mode .skill-icon {
 /* 슬라이더 안쪽 버튼 (서비스 기획 상세) */
 .slider-controls .detail-link {
   /* 상세 페이지 작업시 디스플레이 항목 제거 */
-  display: none;
   background: #007bff;
   color: white;
   padding: 15px 30px;
